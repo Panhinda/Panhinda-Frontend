@@ -10,7 +10,7 @@ main {
     display: flex;
     align-items: center;
     
-    background: rebeccapurple;
+    background: black;
     color: white;
     font-family: Helvetica;
     font-weight: 300;
@@ -23,7 +23,7 @@ main {
 }
 
 .navbar__item {
-    padding: 16px 16px;
+    padding: 16px 25px;
     cursor: pointer;
     vertical-align: middle;
 }
