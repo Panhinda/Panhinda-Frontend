@@ -1,0 +1,42 @@
+.app {
+    text-align: center;
+    margin:0;
+    padding:0;
+    width:100vw;
+    height:100vh;
+    color: #fff;
+    background-color: cadetblue;
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+  }
+  
+  .login-container{
+   
+    width:30%;
+   height: 50vh;
+    background-color:#fff;
+    display:flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .login-group{
+    width:70%;
+    height:70%;
+
+  }
+  .form-group{
+    margin-bottom:4%;
+  }
+  input[type="button"]{
+    color:cadetblue;
+    font-size: large;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-color: cadetblue;
+    border: 3px solid cadetblue;
+  }
