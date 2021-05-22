@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="app-container">
       <BrowserRouter>
-      <NavBar/>
+     
       
       <Route path="/" exact component ={Login}/>
       <Route path="/dashboard" exact component ={Dashboard}/>
