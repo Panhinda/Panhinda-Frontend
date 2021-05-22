@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './login.css';
+import {Link} from 'react-router-dom';
+
 
 class login extends Component {
 
@@ -13,13 +15,16 @@ class login extends Component {
 
                 <div className="login-container">
                     <div className="login-group">
-                    <div class="form-group">
+                    <div className="form-group">
                         <input type="text" className="form-control item" placeholder="email" />
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                         <input type="password" className="form-control item" placeholder="pasword" />
                     </div>
-                    <input type="button" className="form-control item" value="submit" />
+                    <Link to="/dashboard">
+                    <input type="button" className="form-control item" value="submit"/ >
+                    </Link>
+                   
                     </div>
                    
                 </div>
