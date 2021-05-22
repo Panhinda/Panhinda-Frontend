@@ -1,0 +1,16 @@
+.footer-container{
+
+    width:100vw;
+    background-color:aqua ;
+    //background-color:#02060B;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:whitesmoke;
+    
+    height:10vh;
+    z-index: 10;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+}
