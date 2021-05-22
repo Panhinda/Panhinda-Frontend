@@ -31,6 +31,7 @@
   }
   .form-group{
     margin-bottom:4%;
+
   }
   input[type="button"]{
     color:cadetblue;
@@ -39,4 +40,6 @@
     letter-spacing: 2px;
     border-color: cadetblue;
     border: 3px solid cadetblue;
+    text-decoration: none;/*didnt work*/
   }
+  
