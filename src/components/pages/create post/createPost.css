@@ -1,0 +1,34 @@
+
+
+.btn1 {
+    background-color: rgb(138,43,226); /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 10px 10px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    border: radius 20px;;
+    margin-left: 950px;
+    margin-top: 25px;
+    display: inline-block;
+    
+  }
+  .btn {
+    background-color: rgb(138,43,226); /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 10px 20px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+   
+    margin-top: 25px;
+    display: inline-block;
+    float: right;
+    margin-right: 90px;
+    
+  }
+  
+  /* Darker background on mouse-over */
+  /* .btn:hover {
+    background-color: RoyalBlue;
+  } */

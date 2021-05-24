@@ -26,4 +26,6 @@ main {
     padding: 16px 25px;
     cursor: pointer;
     vertical-align: middle;
+    color: white;
+     text-decoration: none;
 }
