@@ -19,7 +19,7 @@ class login extends Component {
                         <input type="text" className="form-control item" placeholder="email" />
                     </div>
                     <div className="form-group">
-                        <input type="password" className="form-control item" placeholder="pasword" />
+                        <input type="password" className="form-control item" placeholder="password" />
                     </div>
                     <Link to="/dashboard">
                     <input type="button" className="form-control item" value="submit"/ >
