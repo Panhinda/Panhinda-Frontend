@@ -35,7 +35,18 @@ class dashboard extends Component {
             <div className="container1">
                 <Header />
                 <h5>Welcome to Panhinda!</h5>
+                <div className="row">
+                <div className="col-8">
+                    <h6>Filters</h6>
+                </div>
 
+                <div className="col-4">
+                    <button onClick={()=>{this.props.history.push(
+            `/dashboard/createPost`
+          );}}>Create Post</button>
+                </div>
+
+                </div>
                 <table className="table table-dark">
                     <thead className="thead-dark">
                         <tr>
