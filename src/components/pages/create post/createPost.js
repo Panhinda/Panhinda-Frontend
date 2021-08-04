@@ -19,11 +19,11 @@ class createPost extends Component {
             content: this.content.value,
             type: this.type.value,
             author: this.author.value,
-            user: this.id.value
+            user_id: this.id.value
         }
 
         axios.post('http://localhost:3000/createPost',obj).then((res) => {
-            console.log(res);
+            console.log(res.data);
         }).catch((err) => {
             console.log(err);
         });
