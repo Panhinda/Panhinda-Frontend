@@ -43,7 +43,29 @@ export const selectedPost = (postId)=>{
 
         })
     })
+    
+}
 
+
+export const predictionResultV2 = (text)=>{
+    console.log("predictionResultV2",text)
+
+    return((dispatch)=>{
+
+        dispatch({type:"PREDICTION_RESULT_V2"})
+        axios.get(`http://localhost:3000/getPost/${text}`,{
+            headers:{
+                'Access-Control-Allow-Origin': 'http://localhost:3000/',
+                'Content-Type': 'application/json'
+            }
+        }).then(res=>{
+            console.log("selected post fetched",res)
+            dispatch({type:'PREDICTION_RESULT_V2_SUCCESS',payload: res})
+        }).catch((err)=>{
+            dispatch({type:'PREDICTION_RESULT_V2_FAILED',payload:err})
+
+        })
+    })
     
 }
 
