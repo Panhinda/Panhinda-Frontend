@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './home.scss'
+import './tpu.scss'
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { predictionResultV2 } from '../../../redux/actions'
@@ -21,7 +21,7 @@ class Home extends Component {
         event.preventDefault();
         console.log('submit');
         const data = {
-            'input': this.title.value
+            'input': this.inputtext.value
         }
 
         axios.post('http://localhost:5000/apiTPUJSON',data ,{
@@ -49,7 +49,7 @@ class Home extends Component {
                                     <label>word:</label>
                                     <input
                                         type="text"
-                                        ref={input => this.title = input}
+                                        ref={input => this.inputtext = input}
                                         placeholder="word"
                                     />
                                     <label>Content:</label>
