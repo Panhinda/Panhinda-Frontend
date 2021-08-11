@@ -47,3 +47,27 @@ export const selectedPost = (postId)=>{
     
 }
 
+export const newPost =(newpost) =>{
+    console.log("Create post action creator")
+//redux thunk should be used to return a function with the 
+    return((dispatch) =>{
+
+        dispatch({type:"CREATE_POST"});
+        axios.post(`http://localhost:3000/createPost`,newpost,{
+            headers:{
+                'Access-Control-Allow-Origin': 'http://localhost:3000/',
+                'Content-Type': 'application/json'
+            }
+        }).then((res)=>{
+            console.log("posts fetched",res)
+            dispatch({type:'CREATE_POST_SUCCESS',payload: res})
+        }
+
+        ).catch((err)=>{
+            dispatch({type:'CREATE_POST_FAILED',payload:err})
+        })
+    })  
+      
+}
+
+

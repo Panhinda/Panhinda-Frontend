@@ -9,6 +9,9 @@ import CreatePost from './components/pages/create post/createPost'
 import ViewPost from './components/pages/viewPost/ViewPost';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Footer from './components/shared components/footer/footer';
+import { ToastContainer } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -21,7 +24,7 @@ function App() {
       <Route path="/dashboard" exact component ={Dashboard}/>
       <Route path="/dashboard/createPost" exact component ={CreatePost}/>
       <Route path="/dashboard/viewPost/:postID" exact component ={ViewPost}/>
-      
+      <ToastContainer />
       </BrowserRouter>
       <Footer/>
     </div>
