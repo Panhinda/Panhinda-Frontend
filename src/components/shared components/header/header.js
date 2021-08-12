@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link,Redirect,NavLink} from 'react-router-dom';
+//import { Link,Redirect,NavLink} from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import './header.css';
 const NavBar = () => (
     <header className='navbar'>

@@ -2,7 +2,7 @@ import './components/shared components/header/header'
 import "./components/shared components/footer/footer"
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './components/shared components/header/header';
+//import NavBar from './components/shared components/header/header';
 import Login from "./components/pages/log in/login";
 import TPU from "./components/pages/tpu/tpu";
 import Dashboard from "./components/pages/dashboard/dashboard"
