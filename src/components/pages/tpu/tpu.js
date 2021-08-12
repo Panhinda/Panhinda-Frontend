@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './tpu.scss'
 import axios from 'axios';
-import { connect } from 'react-redux';
-import { predictionResultV2 } from '../../../redux/actions'
+//import { connect } from 'react-redux';
+//import { predictionResultV2 } from '../../../redux/actions'
 
 
 class Home extends Component {
