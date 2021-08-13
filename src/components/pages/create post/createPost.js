@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './createPost.scss'
-import axios from 'axios';
+//import axios from 'axios';
 import { Formik } from 'formik';
 import * as Yup from "yup";
 import { connect } from 'react-redux';
