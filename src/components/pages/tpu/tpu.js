@@ -24,9 +24,9 @@ class Home extends Component {
             'input': this.inputtext.value
         }
 
-        axios.post('http://localhost:5000/apiTPUJSON',data ,{
+        axios.post('https://sinhala-lyrics-gen-backend-py3.herokuapp.com/apiTPUJSON',data ,{
             headers:{
-                'Access-Control-Allow-Origin': 'http://localhost:3000',
+                'Access-Control-Allow-Origin': 'https://sinhala-lyrics-gen-backend-py3.herokuapp.com',
                 'Content-Type': 'application/json'
             }
         }).then((res) => {
