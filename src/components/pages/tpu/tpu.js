@@ -5,6 +5,7 @@ import axios from 'axios';
 //import { predictionResultV2 } from '../../../redux/actions'
 
 
+
 class Home extends Component {
 
 
@@ -40,6 +41,7 @@ class Home extends Component {
     render() {
         return (
             <div className="container">
+                
                     <div className="card-header"><h1>පන්හිඳ - සිංහල පද ගලපමු</h1></div>
 
                     <div className="card card-statistics custom-card-bottom">
