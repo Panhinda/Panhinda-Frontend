@@ -9,7 +9,7 @@ import Dashboard from "./components/pages/dashboard/dashboard"
 import CreatePost from './components/pages/create post/createPost'
 import ViewPost from './components/pages/viewPost/ViewPost';
 import {BrowserRouter, Route} from 'react-router-dom';
-import Footer from './components/shared components/footer/footer';
+
 import { ToastContainer } from 'react-toastify';
 import LandingPage  from './components/pages/MainView/landingpage';
 
@@ -20,6 +20,7 @@ function App() {
 
   return (
     <div className="app-container">
+   
       <BrowserRouter>
 
      
@@ -30,7 +31,8 @@ function App() {
       <Route path="/dashboard/viewPost/:postID" exact component ={ViewPost}/>
       <ToastContainer />
       </BrowserRouter>
-      <Footer/>
+   
+    
     </div>
 
   );

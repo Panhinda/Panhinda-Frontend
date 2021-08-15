@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './tpu.scss'
 import axios from 'axios';
+import Footer from "./../../shared components/footer/footer"
 //import { connect } from 'react-redux';
 //import { predictionResultV2 } from '../../../redux/actions'
 
@@ -25,7 +26,7 @@ class Home extends Component {
             'input': this.inputtext.value
         }
 
-        axios.post('http://localhost:5000/apiTPUJSON',data ,{
+        axios.post('https://sinhala-lyrics-gen-front.herokuapp.com/apiTPUJSON',data ,{
             headers:{
                 'Access-Control-Allow-Origin': 'http://localhost:3000',
                 'Content-Type': 'application/json'
@@ -40,33 +41,54 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="Screens">
+                <div className="BANNER">
+                    <div className="banner-shade">
                 
-                    <div className="card-header"><h1>පන්හිඳ - සිංහල පද ගලපමු</h1></div>
+                    <div className="banner-layerOne"><h1>පන්හිඳ - සිංහල පද ගලපමු</h1></div>
 
-                    <div className="card card-statistics custom-card-bottom">
+                    <div className="banner-layerTwo">
 
-                            <div style={{display: 'flex', flexDirection: 'column'}}>
-                                <form onSubmit={this.submit}>
-                                    <label>word:</label>
+                            <div className="form-area">
+                                <div>
+                                    <div>
+                                    <div className="input_btn">
+                                    <label>
+                                        {/* <span className="input-label">word:</span> */}
                                     <input
+                                        className="user_input"
                                         type="text"
                                         ref={input => this.inputtext = input}
-                                        placeholder="word"
+                                        placeholder="Enter The Word You want to predict"
                                     />
-                                    <label>Content:</label>
-
-                                    <input
-                                        type="text"
-                                        ref={input => this.content = input}
-                                        placeholder="Content"
-                                    />
-                                    <button type="submit">Prediction</button>
-                                </form>
+                                     </label>
+                                  
+                                    <div>
+                                    <button className="button" onClick={this.submit} type="submit"><span>Prediction </span></button>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div className="textarea-output">
+                                                <label>
+                                                    {/* Content: */}
+                                                
+                                                <textarea
+                                                    type="text"
+                                                    ref={input => this.content = input}
+                                                    placeholder="Predicted Will be display here...."
+                                                />
+                                                </label>
+                                    </div>
+                                    
+                                </div>
                             </div>
                     </div>
-
+                    </div>
+                    </div>
+                    <Footer/>   
             </div>
+    
+
         );
     }
 }

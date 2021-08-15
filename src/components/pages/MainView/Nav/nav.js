@@ -22,17 +22,17 @@ const Header = () => {
                             <NavDropdown className="navLink" title="Version" id="basic-nav-dropdown">
                                 
                                 <Link to="/"> 
-                                    <NavDropdown.Item href="#SignToWord">Version One</NavDropdown.Item>
+                                    <NavDropdown.Item href="#Version1">Version One</NavDropdown.Item>
                                 </Link> 
                                 <NavDropdown.Divider />
                                 <Link to="/versiontwo">
-                                    <NavDropdown.Item href="#WordToSign">Version Two </NavDropdown.Item>
+                                    <NavDropdown.Item href="#Version2">Version Two </NavDropdown.Item>
                                 </Link> 
                                
                                 
                             </NavDropdown>
-                            <Link to="/Learning">
-                                <Nav.Link className="navLink" href="#Learning">Login</Nav.Link>
+                            <Link to="/login">
+                                <Nav.Link className="navLink" href="#Login">Login</Nav.Link>
                             </Link>
                            
                            
