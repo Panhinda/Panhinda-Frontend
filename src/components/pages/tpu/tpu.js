@@ -75,7 +75,7 @@ class Home extends Component {
                                                 <textarea
                                                     type="text"
                                                     ref={input => this.content = input}
-                                                    placeholder="Predicted Will be display here...."
+                                                    placeholder="Predicted Output Will be display here...."
                                                 />
                                                 </label>
                                     </div>
