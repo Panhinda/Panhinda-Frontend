@@ -19,20 +19,20 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav>
                             
-                            <NavDropdown className="navLink" title="Version" id="basic-nav-dropdown">
+                            <NavDropdown className="navLink" title="පිටපත්" id="basic-nav-dropdown">
                                 
-                                <Link to="/"> 
-                                    <NavDropdown.Item href="#Version1">Version One</NavDropdown.Item>
+                                <Link to="/versionone"> 
+                                    <NavDropdown.Item href="#Version1">පලමු පිටපත </NavDropdown.Item>
                                 </Link> 
                                 <NavDropdown.Divider />
                                 <Link to="/versiontwo">
-                                    <NavDropdown.Item href="#Version2">Version Two </NavDropdown.Item>
+                                    <NavDropdown.Item href="#Version2">දෙවන පිටපත </NavDropdown.Item>
                                 </Link> 
                                
                                 
                             </NavDropdown>
                             <Link to="/login">
-                                <Nav.Link className="navLink" href="#Login">Login</Nav.Link>
+                                <Nav.Link className="navLink" href="#Login">ඇතුල් වන්න</Nav.Link>
                             </Link>
                            
                            
