@@ -25,7 +25,7 @@ function App() {
       <BrowserRouter>
 
      
-      {/* <Route path="/" exact component ={LandingPage}/>  */}
+     <Route path="/" exact component ={LandingPage}/> 
       <Route path="/versiontwo" exact component ={TPU}/> 
       <Route path="/versionone" exact component ={textgenrnn}/> 
       <Route path="/login" exact component ={Login}/>
