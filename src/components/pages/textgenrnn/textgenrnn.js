@@ -25,8 +25,8 @@ class textgenrnn extends Component {
         const data = {
             'input': this.inputtext.value
         }
-
-        axios.post(process.env.ACTIVE_BACKEND_URL+'/apitextgenrnnjson',data ,{
+//process.env.ACTIVE_BACKEND_URL+
+        axios.post('https://sinhala-lyrics-gen-backend.herokuapp.com/apitextgenrnnjson',data ,{
             headers:{
                 'Access-Control-Allow-Origin': process.env.ACTIVE_FRONTEND_URL,
                 'Content-Type': 'application/json'
