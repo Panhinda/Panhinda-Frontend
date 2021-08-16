@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import './tpu.scss'
+import './textgenrnn.scss'
 import axios from 'axios';
-import Footer from "./../../shared components/footer/footer"
+import Footer from "../../shared components/footer/footer"
 //import { connect } from 'react-redux';
 //import { predictionResultV2 } from '../../../redux/actions'
 
 
 
-class tpu extends Component {
+class textgenrnn extends Component {
 
 
     constructor(props) {
@@ -25,11 +25,10 @@ class tpu extends Component {
         const data = {
             'input': this.inputtext.value
         }
-
-
-        axios.post('https://sinhala-lyrics-gen-backend-py3.herokuapp.com/apiTPUJSON',data ,{
+//process.env.ACTIVE_BACKEND_URL+
+        axios.post('https://sinhala-lyrics-gen-backend.herokuapp.com/apitextgenrnnjson',data ,{
             headers:{
-                'Access-Control-Allow-Origin': 'https://sinhala-lyrics-gen-backend-py3.herokuapp.com',
+                'Access-Control-Allow-Origin': process.env.ACTIVE_FRONTEND_URL,
                 'Content-Type': 'application/json'
             }
         }).then((res) => {
@@ -46,7 +45,7 @@ class tpu extends Component {
                 <div className="BANNER">
                     <div className="banner-shade">
                 
-                    <div className="banner-layerOne"><h1>පන්හිඳ - සිංහල පද ගලපමු 2</h1></div>
+                    <div className="banner-layerOne"><h1>පන්හිඳ - සිංහල පද ගලපමු 1</h1></div>
 
                     <div className="banner-layerTwo">
 
@@ -94,4 +93,4 @@ class tpu extends Component {
     }
 }
 
-export default tpu;
+export default textgenrnn;
