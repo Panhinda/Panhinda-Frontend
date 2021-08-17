@@ -1,144 +1,139 @@
-.container{
-margin-top: 80px;
-    height:100%;
-    width: 100%;
+.container {
+  margin-top: 80px;
+  height: 100%;
+  width: 100%;
 }
 
 input {
-    width: 50%;
+  width: 50%;
 }
 
-.BANNER{
-     
-background-image: url("./images/banner_back.jpg");
-background-size: cover;
-color: white;
-
-    
+.BANNER {
+  background-image: url("./images/banner_back.jpg");
+  background-size: cover;
+  color: white;
 }
-.banner-shade{
-    background: rgb(115,70,78);
-    background: linear-gradient(180deg, rgba(115,70,78,0.7422677689239758) 2%, rgba(247,247,247,0.20725376332173495) 100%);
+.banner-shade {
+  background: rgb(115, 70, 78);
+  background: linear-gradient(
+    180deg,
+    rgba(115, 70, 78, 0.7422677689239758) 2%,
+    rgba(247, 247, 247, 0.20725376332173495) 100%
+  );
 }
-.form-area{
- 
-
-    justify-content: center;
-    height: 100vh;
+.form-area {
+  justify-content: center;
+  height: 100vh;
 }
-.banner-layerOne{
-
-    padding-left: 400px;
-    padding-top: 100px;
+.banner-layerOne {
+  padding-left: 400px;
+  padding-top: 100px;
 }
-.input_btn{
-    display: flex;
-    padding-left: 320px;
-    padding-top: 90px;
-    padding-bottom:50px ;
+.input_btn {
+  display: flex;
+  padding-left: 320px;
+  padding-top: 90px;
+  padding-bottom: 50px;
 }
 
 //button css
 .button {
-    border-radius: 4px;
-    background: rgba( 115, 79, 70, 0.45 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4.0px );
-    -webkit-backdrop-filter: blur( 4.0px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 20px;
-    padding: 5px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 10px;
-    padding-top: 10px;
-    margin-top: 10px !important;
-  }
-  
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .button:hover span {
-    padding-right: 25px;
-  }
-  
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-  //user input styles
-  .user_input{
-       width: 450px;
-       margin-top: 7px;
-       margin-right: 30px;
-       background: rgba( 242, 242, 242, 0.30 );
-       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-       backdrop-filter: blur( 2.5px );
-       -webkit-backdrop-filter: blur( 2.5px );
-       border-radius: 4px;
-       border: 1px solid rgba( 255, 255, 255, 0.18 );
-       height: 50px;
-       color: #FFFFFF;
-  }
-  .user_input:focus {
-    outline: none;
-  }
+  border-radius: 4px;
+  background: rgba(115, 79, 70, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 10px;
+  padding-top: 10px;
+  margin-top: 10px !important;
+}
 
-  //text areaa
-  textarea {
-    width: 692px;
-    min-height: 400px;
-    padding: 2px;
-    resize: none;
-    overflow: auto;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background: rgba( 242, 242, 242, 0.30 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 2.5px );
-    -webkit-backdrop-filter: blur( 2.5px );
-    border-radius: 4px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    font-size: 1rem;
-    color: white;
-    
- 
-  }
- 
-  ::placeholder {
-    color:white;
-    opacity: 1; /* Firefox */
-    font-size: large;
-  }
-  
-  textarea:focus {
-    outline: none;
-  }
-  .textarea-output{
-      padding-left: 320px;
-      
-  }
-  .input-label{
-    font-size:40px ;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  }
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+//user input styles
+.user_input {
+  width: 450px;
+  margin-top: 7px;
+  margin-right: 30px;
+  background: rgba(242, 242, 242, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 50px;
+  color: #ffffff;
+}
+.user_input:focus {
+  outline: none;
+}
+
+//text areaa
+textarea {
+  width: 692px;
+  min-height: 400px;
+  padding: 2px;
+  resize: none;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(242, 242, 242, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 1rem;
+  color: white;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+  font-size: large;
+}
+
+textarea:focus {
+  outline: none;
+}
+.textarea-output {
+  padding-left: 320px;
+}
+.input-label {
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
