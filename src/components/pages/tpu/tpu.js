@@ -26,9 +26,10 @@ class tpu extends Component {
             'input': this.inputtext.value
         }
 
-        axios.post(process.env.ACTIVE_BACKEND_TPU_URL+'/apiTPUJSON',data ,{
+
+        axios.post('https://sinhala-lyrics-gen-backend-py3.herokuapp.com/apiTPUJSON',data ,{
             headers:{
-                'Access-Control-Allow-Origin': process.env.ACTIVE_FRONTEND_URL,
+                'Access-Control-Allow-Origin': 'https://sinhala-lyrics-gen-backend-py3.herokuapp.com',
                 'Content-Type': 'application/json'
             }
         }).then((res) => {
