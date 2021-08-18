@@ -3,7 +3,8 @@ import './dashboard.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../../shared components/header/header';
 import { connect } from 'react-redux';
-import { fetchPosts } from '../../../redux/actions'
+import { fetchPosts } from '../../../redux/actions';
+import {fetchTypes} from '../../../redux/actions';
 
 
 class dashboard extends Component {
@@ -17,6 +18,7 @@ class dashboard extends Component {
 
     componentDidMount() {
         this.props.fetchPosts()
+        this.props.fetchTypes()
 
     }
 
@@ -92,4 +94,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, { fetchPosts })(dashboard); //connect returns a function and 
+export default connect(mapStateToProps, { fetchPosts,fetchTypes })(dashboard); //connect returns a function and 

@@ -24,6 +24,29 @@ export const fetchPosts =() =>{
       
 }
 
+export const fetchTypes =() =>{
+    console.log("fetch post types action creator")
+//redux thunk should be used to return a function with the 
+    return((dispatch) =>{
+
+        dispatch({type:"FETCH_TYPE_LIST"});
+        axios.get(`http://localhost:3000/getAllPostTypes`,{
+            headers:{
+                'Access-Control-Allow-Origin': 'http://localhost:3000/',
+                'Content-Type': 'application/json'
+            }
+        }).then((res)=>{
+            console.log("types fetched",res.data.payload)
+            dispatch({type:'FETCH_TYPES_SUCCESS',payload: res.data.payload})
+        }
+
+        ).catch((err)=>{
+            dispatch({type:'FETCH_TYPES_FAILED',payload:err})
+        })
+    })  
+      
+}
+
 export const selectedPost = (postId)=>{
     console.log("selected Post action",postId)
 

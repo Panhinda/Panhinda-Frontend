@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 
 
 const validationSchema = Yup.object().shape({
-
+ 
     title: Yup.string().required(),
     postType: Yup.string().required(),
     author: Yup.string().required(),
@@ -34,7 +34,7 @@ class createPost extends Component {
         if (prevProps.posts.isLoading && !this.props.posts.isLoading) {
             if (!this.props.hasError) {
                 toast.success("Post Created Successfully!")
-
+                
             }
             else {
                 toast.error("Error!")
@@ -58,6 +58,8 @@ class createPost extends Component {
 
     }
     render() {
+
+        console.log("post types in create",this.props.posts.postType)
         return (
             <div className="container">
 
@@ -101,6 +103,33 @@ class createPost extends Component {
                                                 onChange={handleChange}
                                                 placeholder="Type"
                                             />
+                                            <select
+                                            className="browser-default custom-select custom-select-lg mb-3"
+                                            onChange={(event) => {
+                                                const { value } = event.currentTarget;
+                                                setFieldValue(
+                                                  "postType", value,
+
+                                                  
+                                                );
+                                              }}
+                                            
+                                            >   {console.log("Access postTypes in map ", this.props.posts.postTypes)}
+
+                                                {this.props?.posts?.postTypes?.map((e,indx)=>{
+
+                                                    console.log("inside map function",e)
+                                                        return(
+                                                            <option key={indx}>{e}</option>
+
+                                                        );
+
+
+                                                })}
+
+
+                                            </select>
+
                                             <p className="text-danger">{errors.postType} </p>
                                         </div>
                                         <div className="form-group">
