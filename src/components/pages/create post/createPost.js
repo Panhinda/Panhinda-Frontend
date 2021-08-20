@@ -28,6 +28,12 @@ const initialValues = {
 
 class createPost extends Component {
 
+    constructor(props){
+        super(props);
+        this.state ={
+            typeNone:false
+        }
+    }
 
     componentDidUpdate(prevProps) {
 
@@ -52,12 +58,15 @@ class createPost extends Component {
             author: values.author,
             content: values.content
         }
-        console.log("errors", errors)
+        console.log("on Save function -post", post)
         this.props.newPost(post)
 
 
     }
     render() {
+
+        let feildVal = [... this.props.posts.postTypes,"none"]
+        console.log("feildVal",feildVal)
 
         console.log("post types in create",this.props.posts.postType)
         return (
@@ -95,14 +104,7 @@ class createPost extends Component {
                                         <div className="form-group">
                                             <label>Type:</label>
 
-                                            <input
-                                                type="text"
-                                                name="postType"
-                                                className="form-control"
-                                                value={values.postType}
-                                                onChange={handleChange}
-                                                placeholder="Type"
-                                            />
+                                
                                             <select
                                             className="browser-default custom-select custom-select-lg mb-3"
                                             onChange={(event) => {
@@ -112,11 +114,16 @@ class createPost extends Component {
 
                                                   
                                                 );
+                                                if(value==="none"){
+                                                    this.setState({typeNone:true})
+                                                }
                                               }}
                                             
                                             >   {console.log("Access postTypes in map ", this.props.posts.postTypes)}
 
-                                                {this.props?.posts?.postTypes?.map((e,indx)=>{
+                                                { 
+                                                
+                                                feildVal.map((e,indx)=>{
 
                                                     console.log("inside map function",e)
                                                         return(
@@ -129,7 +136,18 @@ class createPost extends Component {
 
 
                                             </select>
-
+                                                <div className={this.state.typeNone?`d-block`:`d-none`}>
+                                                    <p>Add New Type</p>
+                                                    <input
+                                                type="text"
+                                                name="postType"
+                                                className="form-control"
+                                                value={values.postType}
+                                                onChange={handleChange}
+                                                placeholder="Type"
+                                            />
+                                                    <button>Add New Type</button>
+                                                </div>
                                             <p className="text-danger">{errors.postType} </p>
                                         </div>
                                         <div className="form-group">
