@@ -88,6 +88,11 @@ class textgenrnn extends Component {
                 </div>
               </div>
             </div>
+            <div className="layer3-cover">
+              <div className="col-12 col-sm-6 col-md-6 layer-3">
+                about the version
+              </div>
+            </div>
           </div>
         </div>
 
