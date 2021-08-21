@@ -40,7 +40,7 @@ class textgenrnn extends Component {
   render() {
     return (
       <div className="Screens">
-        <div className="BANNER">
+        <div className="BANNER1">
           <div className="banner-shade">
             <div className="banner-layerOne">
               <h1>පන්හිඳ - සිංහල පද ගලපමු 1</h1>
