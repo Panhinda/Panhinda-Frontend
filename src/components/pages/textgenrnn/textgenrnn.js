@@ -75,12 +75,11 @@ class textgenrnn extends Component {
                     <div className="layer3-cover">about the version</div>
                   </div>
                 </div>
+                <Footer />
               </div>
             </div>
           </div>
         </div>
-
-        <Footer />
       </div>
     );
   }

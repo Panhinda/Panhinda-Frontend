@@ -80,9 +80,9 @@ class tpu extends Component {
                 </div>
               </div>
             </div>
+            <Footer />
           </div>
         </div>
-        <Footer />
       </div>
     );
   }
