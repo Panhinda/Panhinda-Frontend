@@ -42,9 +42,44 @@ class textgenrnn extends Component {
       <div className="Screens">
         <div className="BANNER1">
           <div className="banner-shade">
-            <div className="banner-layerOne">
-              <h1>පන්හිඳ - සිංහල පද ගලපමු 1</h1>
+            <div className="container">
+              <div className="row">
+                <div className="col-12 col-sm-12 main-div">
+                  <div style={{ width: "690px", paddingLeft: "70px" }}>
+                    <h1>පන්හිඳ - සිංහල පද ගලපමු 1</h1>
+                  </div>
+                  <div style={{ width: "690px" }}>
+                    <input
+                      className="user_input"
+                      type="text"
+                      ref={(input) => (this.inputtext = input)}
+                      placeholder="කැමති ආරම්භක වචන(ය)"
+                    />
+                    <button
+                      className="button"
+                      onClick={this.submit}
+                      type="submit"
+                    >
+                      <span>පද ගැළපීම </span>
+                    </button>
+                  </div>
+                  <div style={{ width: "690px" }}>
+                    <textarea
+                      type="text"
+                      ref={(input) => (this.content = input)}
+                      placeholder="යෝජිත පද..."
+                    />
+                  </div>
+
+                  <div style={{ width: "690px" }}>
+                    <div className="layer3-cover">about the version</div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            {/* <div className="banner-shade">
+            <div className="banner-layerOne"></div>
 
             <div className="banner-layerTwo">
               <div className="form-area ">
@@ -54,7 +89,7 @@ class textgenrnn extends Component {
                       <div class="col-12 col-sm-6 col-md-8">
                         <label>
                           {/* <span className="input-label">word:</span> */}
-                          <input
+            {/* <input
                             className="user_input"
                             type="text"
                             ref={(input) => (this.inputtext = input)}
@@ -77,7 +112,7 @@ class textgenrnn extends Component {
                       <label>
                         {/* Content: */}
 
-                        <textarea
+            {/* <textarea
                           type="text"
                           ref={(input) => (this.content = input)}
                           placeholder="යෝජිත පද..."
@@ -93,6 +128,7 @@ class textgenrnn extends Component {
                 about the version
               </div>
             </div>
+          </div> */}
           </div>
         </div>
 
