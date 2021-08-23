@@ -47,10 +47,22 @@ class textgenrnn extends Component {
                 <div className="col-12 col-sm-12 main-div">
                   <div style={{ width: "33%" }}>
                     <div style={{ width: "690px", paddingLeft: "70px" }}>
-                      <h1>පන්හිඳ - සිංහල පද ගලපමු 1</h1>
+                      <h1>පන්හිඳ - සිංහල පද ගලපමු - පළමු පිටපත</h1>
                     </div>
                     <div>
-                      <div className="layer3-cover">about the version</div>
+                      <div className="layer3-cover"> 
+                      පළමු පිටපත සදහා සහය : 
+                      <br/>
+                      fushenkao - https://github.com/fushenkao/Sinhala-Lyrics-Gen ,
+                      <br/>
+                       minimaxir - https://github.com/minimaxir/textgenrnn
+                       <br/>
+                       පසුතලය : කැටපත් පවුර, සීගිරිය (Sigiri Graffiti) http://thenationaltrust.lk/wp-content/uploads/2018/06/nds-nt-sigiriya.pdf
+                       <br/>
+                      වෙනස්කම් වල ඉතිහාසය : https://ksankalpa.blogspot.com/2021/02/panhidalyrics-chages-log.html
+                      
+
+                      </div>
                     </div>
                   </div>
                   <div className="second-side" style={{ width: "63%" }}>

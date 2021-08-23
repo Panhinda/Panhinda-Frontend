@@ -51,10 +51,18 @@ class tpu extends Component {
                 <div className="col-12 col-sm-12 main-div">
                   <div style={{ width: "33%" }}>
                     <div style={{ width: "690px", paddingLeft: "70px" }}>
-                      <h1>පන්හිඳ - සිංහල පද ගලපමු 2</h1>
+                      <h1>පන්හිඳ - සිංහල පද ගලපමු - දෙවන පිටපත</h1>
                     </div>
                     <div>
-                      <div className="layer3-cover">about the version</div>
+                      <div className="layer3-cover">
+                      භාෂවේ ඇති කාව්‍යමය බව සිංහල භාෂාව භාවිතා කරන අපේ හැඟීම ප්‍රකාශනයේ හැකියාව පුළුල් කර ඇත. අසිමන්තිකව කාව්‍යමය භාෂාව රසවිඳීම සොයා දෙන්නට පන්හිඳ උත්සහ කරයි.
+                      <br/>
+දෙවන පිටපතට සහය : https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/shakespeare_with_tpu_and_keras.ipynb 
+<br/>
+පසුතලය : වෙස්සගිරිය සෙල්ලිපි (Wessagiri Manuscript) https://www.facebook.com/media/set/?set=a.454180464950026.1073741832.412244795810260&type=3
+<br/>
+වෙනස්කම් වල ඉතිහාසය : https://ksankalpa.blogspot.com/2021/02/panhidalyrics-chages-log.html
+                     </div>
                     </div>
                   </div>
                   <div className="second-side" style={{ width: "63%" }}>
