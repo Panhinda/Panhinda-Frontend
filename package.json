@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.1",
+    "dotenv": "^10.0.0",
     "env-cmd": "^10.1.0",
     "formik": "^2.2.9",
     "jquery": "^3.6.0",
@@ -26,9 +27,9 @@
     "yup": "^0.32.9"
   },
   "scripts": {
-    "start": "env-cmd -f .env.production react-scripts start",
-    "build": "env-cmd -f .env.production react-scripts build",
-    "test": "env-cmd -f .env.production react-scripts test",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

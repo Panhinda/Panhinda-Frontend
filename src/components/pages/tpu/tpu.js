@@ -10,23 +10,24 @@ class tpu extends Component {
     super(props);
     this.state = {};
   }
-  componentDidMount() {}
+  componentDidMount() {
+    //console.log(process.env.REACT_APP_ACTIVE_BACKEND_URL);
+   // console.log(process.env.REACT_APP_ACTIVE_BACKEND_TPU_URL);
+  }
 
   submit = (event) => {
     event.preventDefault();
-    console.log("submit");
+    console.log("submit",this.inputtext.value);
     const data = {
       input: this.inputtext.value,
     };
 
     axios
-      .post(
-        "https://sinhala-lyrics-gen-backend-py3.herokuapp.com/apiTPUJSON",
+      .post(process.env.REACT_APP_ACTIVE_BACKEND_TPU_URL+"/apiTPUJSON",
         data,
         {
           headers: {
-            "Access-Control-Allow-Origin":
-              "https://sinhala-lyrics-gen-backend-py3.herokuapp.com",
+            "Access-Control-Allow-Origin":process.env.REACT_APP_ACTIVE_FRONTEND_URL,
             "Content-Type": "application/json",
           },
         }

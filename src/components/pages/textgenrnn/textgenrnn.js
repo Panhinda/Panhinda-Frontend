@@ -19,11 +19,11 @@ class textgenrnn extends Component {
     //process.env.ACTIVE_BACKEND_URL+
     axios
       .post(
-        "https://sinhala-lyrics-gen-backend.herokuapp.com/apitextgenrnnjson",
+        process.env.REACT_APP_ACTIVE_BACKEND_URL+"/apitextgenrnnjson",
         data,
         {
           headers: {
-            "Access-Control-Allow-Origin": process.env.ACTIVE_FRONTEND_URL,
+            "Access-Control-Allow-Origin": process.env.REACT_APP_ACTIVE_FRONTEND_URL,
             "Content-Type": "application/json",
           },
         }

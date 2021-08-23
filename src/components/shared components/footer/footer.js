@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.css";
 import logo from "./img/FooterLogo.png";
-import { Link } from "react-router-dom";
+//mport { Link } from "react-router-dom";
 
 const Footer = () => (
   <div className="footer">
@@ -10,7 +10,6 @@ const Footer = () => (
     </div>
     <div className="para">
       <p className="para">
-        <Link to="/agreement">ගිවිසුම </Link>
         ||{" "}
         <a
           className="footer-a"
