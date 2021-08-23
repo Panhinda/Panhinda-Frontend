@@ -45,34 +45,38 @@ class textgenrnn extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-12 col-sm-12 main-div">
-                  <div style={{ width: "690px", paddingLeft: "70px" }}>
-                    <h1>පන්හිඳ - සිංහල පද ගලපමු 1</h1>
+                  <div style={{ width: "33%" }}>
+                    <div style={{ width: "690px", paddingLeft: "70px" }}>
+                      <h1>පන්හිඳ - සිංහල පද ගලපමු 1</h1>
+                    </div>
+                    <div>
+                      <div className="layer3-cover">about the version</div>
+                    </div>
                   </div>
-                  <div style={{ width: "690px" }}>
-                    <input
-                      className="user_input"
-                      type="text"
-                      ref={(input) => (this.inputtext = input)}
-                      placeholder="කැමති ආරම්භක වචන(ය)"
-                    />
-                    <button
-                      className="button"
-                      onClick={this.submit}
-                      type="submit"
-                    >
-                      <span>පද ගැළපීම </span>
-                    </button>
-                  </div>
-                  <div style={{ width: "690px" }}>
-                    <textarea
-                      type="text"
-                      ref={(input) => (this.content = input)}
-                      placeholder="යෝජිත පද..."
-                    />
-                  </div>
+                  <div className="second-side" style={{ width: "63%" }}>
+                    <div>
+                      <input
+                        className="user_input"
+                        type="text"
+                        ref={(input) => (this.inputtext = input)}
+                        placeholder="කැමති ආරම්භක වචන(ය)"
+                      />
+                      <button
+                        className="button"
+                        onClick={this.submit}
+                        type="submit"
+                      >
+                        <span>පද ගැළපීම </span>
+                      </button>
+                    </div>
 
-                  <div style={{ width: "690px" }}>
-                    <div className="layer3-cover">about the version</div>
+                    <div>
+                      <textarea
+                        type="text"
+                        ref={(input) => (this.content = input)}
+                        placeholder="යෝජිත පද..."
+                      />
+                    </div>
                   </div>
                 </div>
                 <Footer />
