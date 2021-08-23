@@ -20,8 +20,8 @@ function App() {
   return (
     <div className="app-container">
       <BrowserRouter>
-        <Route path="/" exact component={Ver1} />
-        <Route path="/versiontwo" exact component={Ver2} />
+        <Route path="/" exact component={Ver2} />
+        <Route path="/versionone" exact component={Ver1} />
         <Route path="/login" exact component={Login} />
         <Route path="/dashboard" exact component={Dashboard} />
         <Route path="/dashboard/createPost" exact component={CreatePost} />

@@ -26,13 +26,13 @@ const Header = () => {
               title="පිටපත්"
               id="basic-nav-dropdown"
             >
-              <Link to="/">
+              <Link to="/versionone">
                 <NavDropdown.Item href="#Version1">
                   පලමු පිටපත{" "}
                 </NavDropdown.Item>
               </Link>
               <NavDropdown.Divider />
-              <Link to="/versiontwo">
+              <Link to="/">
                 <NavDropdown.Item href="#Version2">
                   දෙවන පිටපත{" "}
                 </NavDropdown.Item>
