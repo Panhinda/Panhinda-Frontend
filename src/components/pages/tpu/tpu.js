@@ -12,22 +12,24 @@ class tpu extends Component {
   }
   componentDidMount() {
     //console.log(process.env.REACT_APP_ACTIVE_BACKEND_URL);
-   // console.log(process.env.REACT_APP_ACTIVE_BACKEND_TPU_URL);
+    // console.log(process.env.REACT_APP_ACTIVE_BACKEND_TPU_URL);
   }
 
   submit = (event) => {
     event.preventDefault();
-    console.log("submit",this.inputtext.value);
+    console.log("submit", this.inputtext.value);
     const data = {
       input: this.inputtext.value,
     };
 
     axios
-      .post(process.env.REACT_APP_ACTIVE_BACKEND_TPU_URL+"/apiTPUJSON",
+      .post(
+        process.env.REACT_APP_ACTIVE_BACKEND_TPU_URL + "/apiTPUJSON",
         data,
         {
           headers: {
-            "Access-Control-Allow-Origin":process.env.REACT_APP_ACTIVE_FRONTEND_URL,
+            "Access-Control-Allow-Origin":
+              process.env.REACT_APP_ACTIVE_FRONTEND_URL,
             "Content-Type": "application/json",
           },
         }
@@ -50,19 +52,16 @@ class tpu extends Component {
               <div className="row">
                 <div className="col-12 col-sm-12 main-div">
                   <div style={{ width: "33%" }}>
-                    <div style={{ width: "690px", paddingLeft: "70px" }}>
-                      <h1>පන්හිඳ - සිංහල පද ගලපමු - දෙවන පිටපත</h1>
+                    <div style={{ width: "1190px", paddingLeft: "70px" }}>
+                      <h1>පන්හිඳ - සිංහල පද ගලපමු-දෙවන පිටපත</h1>
                     </div>
                     <div>
-                      <div className="layer3-cover">
-                      භාෂවේ ඇති කාව්‍යමය බව සිංහල භාෂාව භාවිතා කරන අපේ හැඟීම ප්‍රකාශනයේ හැකියාව පුළුල් කර ඇත. අසිමන්තිකව කාව්‍යමය භාෂාව රසවිඳීම සොයා දෙන්නට පන්හිඳ උත්සහ කරයි.
-                      <br/>
-දෙවන පිටපතට සහය : https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/shakespeare_with_tpu_and_keras.ipynb 
-<br/>
-පසුතලය : වෙස්සගිරිය සෙල්ලිපි (Wessagiri Manuscript) https://www.facebook.com/media/set/?set=a.454180464950026.1073741832.412244795810260&type=3
-<br/>
-වෙනස්කම් වල ඉතිහාසය : https://ksankalpa.blogspot.com/2021/02/panhidalyrics-chages-log.html
-                     </div>
+                      <div
+                        style={{ wordBreak: "break-all" }}
+                        className="layer3-cover"
+                      >
+                        about the version
+                      </div>
                     </div>
                   </div>
                   <div className="second-side" style={{ width: "63%" }}>
