@@ -128,11 +128,9 @@ textarea:focus {
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 .layer3-cover {
-  height: 415px;
+  height: 400px;
   opacity: 0.9;
   margin-top: 0 !important;
-
-  background: rgba(115, 79, 70, 0.4);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(11px);
   -webkit-backdrop-filter: blur(11px);
@@ -142,3 +140,8 @@ textarea:focus {
 .second-side {
   margin-left: 30px;
 }
+
+// background: rgba(115, 79, 70, 0.4);
+//background-image: 
+//url("./images/manuscripts.jpg");
+//background-repeat: no-repeat, no-repeat;
