@@ -19,11 +19,12 @@ class textgenrnn extends Component {
     //process.env.ACTIVE_BACKEND_URL+
     axios
       .post(
-        process.env.REACT_APP_ACTIVE_BACKEND_URL+"/apitextgenrnnjson",
+        process.env.REACT_APP_ACTIVE_BACKEND_URL + "/apitextgenrnnjson",
         data,
         {
           headers: {
-            "Access-Control-Allow-Origin": process.env.REACT_APP_ACTIVE_FRONTEND_URL,
+            "Access-Control-Allow-Origin":
+              process.env.REACT_APP_ACTIVE_FRONTEND_URL,
             "Content-Type": "application/json",
           },
         }
@@ -46,22 +47,16 @@ class textgenrnn extends Component {
               <div className="row">
                 <div className="col-12 col-sm-12 main-div">
                   <div style={{ width: "33%" }}>
-                    <div style={{ width: "690px", paddingLeft: "70px" }}>
-                      <h1>පන්හිඳ - සිංහල පද ගලපමු - පළමු පිටපත</h1>
+                    <div style={{ width: "1190px", paddingLeft: "70px" }}>
+                      <h1>පන්හිඳ - සිංහල පද ගලපමු-පලමු පිටපත</h1>
                     </div>
                     <div>
-                      <div className="layer3-cover"> 
-                      පළමු පිටපත සදහා සහය : 
-                      <br/>
-                      fushenkao - https://github.com/fushenkao/Sinhala-Lyrics-Gen ,
-                      <br/>
-                       minimaxir - https://github.com/minimaxir/textgenrnn
-                       <br/>
-                       පසුතලය : කැටපත් පවුර, සීගිරිය (Sigiri Graffiti) http://thenationaltrust.lk/wp-content/uploads/2018/06/nds-nt-sigiriya.pdf
-                       <br/>
-                      වෙනස්කම් වල ඉතිහාසය : https://ksankalpa.blogspot.com/2021/02/panhidalyrics-chages-log.html
-                      
-
+                      <div
+                        style={{ wordBreak: "break-all" }}
+                        className="layer3-cover"
+                      >
+                        about the
+                        versionaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggssssssssssssssss
                       </div>
                     </div>
                   </div>
