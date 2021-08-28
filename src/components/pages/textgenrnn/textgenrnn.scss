@@ -1,17 +1,15 @@
-.container {
-  height: 100%;
-  width: 100%;
-}
-
-input {
-  width: 50%;
+.main-head {
+  padding: 30px;
 }
 
 .BANNER1 {
   background-image: url("./images/banner_back1.jpg") !important;
   background-size: cover;
+  max-width: 100%;
+  height: auto;
   color: white;
 }
+
 .banner-shade {
   background: rgb(115, 70, 78);
   background: linear-gradient(
@@ -20,16 +18,12 @@ input {
     rgba(247, 247, 247, 0.20725376332173495) 100%
   );
 }
-.main-div {
-  display: flex;
-  // flex-direction: column;
-  align-items: center !important;
-  height: 100vh !important;
-  margin-bottom: 0px !important;
+.container {
+  margin-top: 50px;
 }
 
 //button css
-.button {
+.button-one {
   border-radius: 4px;
   background: rgba(115, 79, 70, 0.45);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -40,24 +34,22 @@ input {
   border: none;
   color: #ffffff;
   text-align: center;
+  height: 48px;
   font-size: 20px;
   padding: 5px;
-  width: 240px;
+  width: 100%;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 10px;
-  padding-top: 10px;
-  margin-top: 10px !important;
 }
 
-.button span {
+.button-one span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.button span:after {
+.button-one span:after {
   content: "\00bb";
   position: absolute;
   opacity: 0;
@@ -66,26 +58,24 @@ input {
   transition: 0.5s;
 }
 
-.button:hover span {
+.button-one:hover span {
   padding-right: 25px;
 }
 
-.button:hover span:after {
+.button-one:hover span:after {
   opacity: 1;
   right: 0;
 }
 //user input styles
 .user_input {
-  width: 400px;
-  margin-top: 7px;
-
+  width: 100%;
   background: rgba(242, 242, 242, 0.3);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2.5px);
   -webkit-backdrop-filter: blur(2.5px);
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  height: 50px;
+  height: 48px;
   color: #ffffff;
 }
 .user_input:focus {
@@ -94,8 +84,7 @@ input {
 
 //text areaa
 textarea {
-  width: 692px;
-  min-height: 300px;
+  width: 100%;
   padding: 2px;
   resize: none;
   overflow: auto;
@@ -128,20 +117,23 @@ textarea:focus {
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 .layer3-cover {
-  height: 400px;
+  height: 450px;
   opacity: 0.9;
-  margin-top: 0 !important;
+
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(11px);
+
   -webkit-backdrop-filter: blur(11px);
-  border-radius: 10px;
+
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.second-side {
-  margin-left: 30px;
+.row-details {
+  height: 100%;
+}
+.t-area {
+  padding: 24px 0 0 0 !important;
 }
 
 // background: rgba(115, 79, 70, 0.4);
-//background-image: 
+//background-image:
 //url("./images/manuscripts.jpg");
 //background-repeat: no-repeat, no-repeat;
