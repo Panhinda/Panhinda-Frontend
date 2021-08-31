@@ -55,13 +55,17 @@ class textgenrnn extends Component {
                  <div>fushenkao : <a href="https://github.com/fushenkao/Sinhala-Lyrics-Gen" target="_blank" rel="noreferrer">Sinhala-Lyrics-Gen</a>
                   </div> 
                   <div> minimaxir :<a href="https://github.com/minimaxir/textgenrnn" target="_blank" rel="noreferrer">textgenrnn</a> </div> 
-                  <div>පසුතලය : කැටපත් පවුර, සීගිරිය (Sigiri Mirror Wall)</div> 
+   {/*                <div>පසුතලය : කැටපත් පවුර, සීගිරිය (Sigiri Mirror Wall)</div> 
                   <div><a href="http://thenationaltrust.lk/wp-content/uploads/2018/06/nds-nt-sigiriya.pdf" target="_blank" rel="noreferrer">thenationaltrust.lk</a> 
+                  </div> */}
+                  <div>පසුතලය : බ්‍රාහ්මී නොවන සංකේත</div> 
+                  <div><a href="https://sanskaravinivida.wordpress.com/2020/06/03/%E0%B6%BD%E0%B6%9A%E0%B7%8A%E0%B6%AF%E0%B7%92%E0%B7%80-%E0%B6%BD%E0%B7%9A%E0%B6%9B%E0%B6%B1-%E0%B7%80%E0%B7%92%E0%B6%B4%E0%B7%8A%E0%B6%BD%E0%B7%80%E0%B6%BA/" target="_blank" rel="noreferrer">ලක්දිව ලේඛන විප්ලවය</a> 
                   </div> 
                   <div>
                   වෙනස්කම් වල ඉතිහාසය :</div> 
                   <div>
-                  https://ksankalpa.blogspot.com/2021/02/panhidalyrics-chages-log.html</div> 
+                  <a href="https://sankalpayak.medium.com/%E0%B7%83%E0%B7%92%E0%B6%82%E0%B7%84%E0%B6%BD-%E0%B6%B4%E0%B6%AF-%E0%B6%9C%E0%B6%BD%E0%B6%B4%E0%B6%B8%E0%B7%94-change-log-528f41be0193" target="_blank" rel="noreferrer">Kanchana Sankalpa</a> 
+                  </div>
                 </div>
 
                 <div className="col-xl-7 col-lg-8   second-side txtcolor">
