@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./tpu.scss";
 import axios from "axios";
 import Footer from "./../../shared components/footer/footer";
+import Loader from "../../animations/Loading";
 //import { connect } from 'react-redux';
 //import { predictionResultV2 } from '../../../redux/actions'
 
@@ -18,6 +19,9 @@ class tpu extends Component {
   submit = (event) => {
     event.preventDefault();
     console.log("submit", this.inputtext.value);
+    this.setState({
+      isLoading: true,
+    });
     const data = {
       input: this.inputtext.value,
     };
@@ -37,6 +41,9 @@ class tpu extends Component {
       .then((res) => {
         console.log(res);
         this.content.value = res.data.output;
+        this.setState({
+          isLoading: false,
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -44,6 +51,7 @@ class tpu extends Component {
   };
 
   render() {
+    var { isLoading } = this.state;
     return (
       <div className="Screens">
         <div className="BANNER">
@@ -86,7 +94,11 @@ class tpu extends Component {
                         onClick={this.submit}
                         type="submit"
                       >
-                        <span className="txtcolor">පද ගැළපීම </span>
+                        <span className="txtcolor">
+                          {" "}
+                          {isLoading && <Loader />}
+                          {!isLoading && <h2>පද ගැළපීම</h2>}{" "}
+                        </span>
                       </button>
                     </div>
                   </div>
