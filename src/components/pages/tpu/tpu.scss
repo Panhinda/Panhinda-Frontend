@@ -32,7 +32,7 @@
   border: none;
   color: #3f2a15;
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   padding: 5px;
 
   transition: all 0.5s;
@@ -122,5 +122,6 @@ textarea:focus {
 }
 //text color
 .txtcolor {
-  color: #3f2a15 !important;
+  //color: #3f2a15 !important;
+  color:black;
 }

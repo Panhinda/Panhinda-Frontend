@@ -46,22 +46,22 @@ class textgenrnn extends Component {
             <div className="container">
               <div className="row">
                 <div className="col col-sm-12 main-head txtcolor">
-                  <h3>සිංහල පද ගලපමු-පලමු පිටපත</h3>
+                  <h2>සිංහල පද ගලපමු-පලමු පිටපත</h2>
                 </div>
               </div>{" "}
               <div className="row row-details">
                 <div className="col-xl-5 col-lg-4 layer3-cover txtcolor">
-                  පළමු පිටපත සදහා සහය :
-                  <br /> fushenkao -
-                  https://github.com/fushenkao/Sinhala-Lyrics-Gen ,
-                  <br /> minimaxir - https://github.com/minimaxir/textgenrnn
-                  <br /> පසුතලය : කැටපත් පවුර, සීගිරිය (Sigiri Mirror Wall)
-                  <br />
-                  http://thenationaltrust.lk/wp-content/uploads/2018/06/nds-nt-sigiriya.pdf
-                  <br />
-                  වෙනස්කම් වල ඉතිහාසය :
-                  <br />
-                  https://ksankalpa.blogspot.com/2021/02/panhidalyrics-chages-log.html
+                  <h3>පළමු පිටපත සදහා සහය : </h3>
+                 <div>fushenkao : <a href="https://github.com/fushenkao/Sinhala-Lyrics-Gen" target="_blank" rel="noreferrer">Sinhala-Lyrics-Gen</a>
+                  </div> 
+                  <div> minimaxir :<a href="https://github.com/minimaxir/textgenrnn" target="_blank" rel="noreferrer">textgenrnn</a> </div> 
+                  <div>පසුතලය : කැටපත් පවුර, සීගිරිය (Sigiri Mirror Wall)</div> 
+                  <div><a href="http://thenationaltrust.lk/wp-content/uploads/2018/06/nds-nt-sigiriya.pdf" target="_blank" rel="noreferrer">thenationaltrust.lk</a> 
+                  </div> 
+                  <div>
+                  වෙනස්කම් වල ඉතිහාසය :</div> 
+                  <div>
+                  https://ksankalpa.blogspot.com/2021/02/panhidalyrics-chages-log.html</div> 
                 </div>
 
                 <div className="col-xl-7 col-lg-8   second-side txtcolor">

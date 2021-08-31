@@ -51,7 +51,7 @@ class tpu extends Component {
             <div className="container">
               <div className="row">
                 <div className="col col-sm-12 main-head txtcolor">
-                  <h3>සිංහල පද ගලපමු-දෙවන පිටපත</h3>
+                  <h2>සිංහල පද ගලපමු-දෙවන පිටපත</h2>
                 </div>
               </div>{" "}
               <div className="row row-details">

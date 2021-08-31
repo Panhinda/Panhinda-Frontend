@@ -35,7 +35,7 @@
   color: #ffffff;
   text-align: center;
   height: 48px;
-  font-size: 20px;
+  font-size: 25px;
   padding: 5px;
   width: 100%;
   transition: all 0.5s;
@@ -125,6 +125,7 @@ textarea:focus {
   -webkit-backdrop-filter: blur(11px);
 
   border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 25px;
 }
 .row-details {
   height: 100%;
