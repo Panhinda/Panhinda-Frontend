@@ -3,6 +3,8 @@ import "./tpu.scss";
 import axios from "axios";
 import Footer from "./../../shared components/footer/footer";
 import Loader from "../../animations/Loading";
+import { toast } from "react-toastify";
+
 //import { connect } from 'react-redux';
 //import { predictionResultV2 } from '../../../redux/actions'
 
@@ -41,12 +43,18 @@ class tpu extends Component {
       .then((res) => {
         console.log(res);
         this.content.value = res.data.output;
+        toast("සාර්ථකයි");
+
         this.setState({
           isLoading: false,
         });
       })
       .catch((err) => {
         console.log(err);
+        toast("කරුණාකර නැවත උත්සහ කරන්න");
+        this.setState({
+          isLoading: false,
+        });
       });
   };
 

@@ -3,6 +3,7 @@ import "./textgenrnn.scss";
 import axios from "axios";
 import Footer from "../../shared components/footer/footer";
 import Loader from "../../animations/Loading";
+import { toast } from "react-toastify";
 
 class textgenrnn extends Component {
   constructor(props) {
@@ -38,13 +39,18 @@ class textgenrnn extends Component {
       .then((res) => {
         console.log(res);
         this.content.value = res.data.output;
-        console.log("re check");
+        toast("සාර්ථකයි");
+
         this.setState({
           isLoading: false,
         });
       })
       .catch((err) => {
         console.log(err);
+        toast("කරුණාකර නැවත උත්සහ කරන්න");
+        this.setState({
+          isLoading: false,
+        });
       });
   };
 
