@@ -7,7 +7,8 @@ const initialState = {
     hasError: false,
     error: "",
     createPostError: "",
-    postTypes:[]
+    postTypes: [],
+    authorList: []
 
 };
 
@@ -21,10 +22,9 @@ const postReducer = (state = initialState, action) => {
             })
         case "FETCH_POSTS_SUCCESS":
             let data = action.payload
-            console.log("data",data.data.payload)
-            return ( {
-
-                ...state, 
+            console.log("data", data.data.payload)
+            return ({
+                ...state,
                 isLoading: false,
                 hasError: false,
                 posts: [...data.data.payload]
@@ -93,7 +93,7 @@ const postReducer = (state = initialState, action) => {
 
             })
         case "FETCH_TYPES_SUCCESS":
-            console.log("Fetch type success",action.payload)
+            console.log("Fetch type success", action.payload)
             return Object.assign({}, state, {
                 isLoading: false,
                 postTypes: action.payload,
@@ -107,6 +107,33 @@ const postReducer = (state = initialState, action) => {
                 // error:action.payload
 
             })
+        case "FETCH_AUTHOR_LIST":
+
+            return Object.assign({}, state, {
+                isLoading: true,
+                hasError: false,
+                // error:action.payload
+
+            })
+        case "FETCH_AUTHOR_LIST_SUCCESS":
+
+            return Object.assign({}, state, {
+                isLoading: false,
+                authorList: action.payload,
+                // error:action.payload
+
+            })
+        case "FETCH_AUTHOR_LIST_FAILED":
+
+            return Object.assign({}, state, {
+                isLoading: false,
+                hasError: true,
+                error: action.payload
+
+                // error:action.payload
+
+            })
+
 
 
 
