@@ -112,8 +112,9 @@ class tpu extends Component {
                 <div className="col-xl-7 col-lg-8   second-side txtcolor">
                   <div className="row">
                     <div className="col-12 col-sm-8">
+                   {/*  className="txtcolor" */}
                       <input
-                        className="txtcolor"
+                       
                         className="user_input"
                         type="text"
                         ref={(input) => (this.inputtext = input)}
