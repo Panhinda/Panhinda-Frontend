@@ -2,17 +2,24 @@ import React, { Component } from "react";
 import "./textgenrnn.scss";
 import axios from "axios";
 import Footer from "../../shared components/footer/footer";
+import Loader from "../../animations/Loading";
+import { toast } from "react-toastify";
 
 class textgenrnn extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      // isLoading: true,
+    };
   }
   componentDidMount() {}
 
   submit = (event) => {
     event.preventDefault();
     console.log("submit");
+    this.setState({
+      isLoading: true,
+    });
     const data = {
       input: this.inputtext.value,
     };
@@ -32,13 +39,23 @@ class textgenrnn extends Component {
       .then((res) => {
         console.log(res);
         this.content.value = res.data.output;
+        toast("සාර්ථකයි");
+
+        this.setState({
+          isLoading: false,
+        });
       })
       .catch((err) => {
         console.log(err);
+        toast("කරුණාකර නැවත උත්සහ කරන්න");
+        this.setState({
+          isLoading: false,
+        });
       });
   };
 
   render() {
+    var { isLoading } = this.state;
     return (
       <div className="Screens">
         <div className="BANNER1">
@@ -46,25 +63,62 @@ class textgenrnn extends Component {
             <div className="container">
               <div className="row">
                 <div className="col col-sm-12 main-head txtcolor">
-                  <h2>සිංහල පද ගලපමු-පලමු පිටපත</h2>
+                  <h2>සිංහල පද ගලපමු-පලමු වෙළුම</h2>
                 </div>
               </div>{" "}
               <div className="row row-details">
                 <div className="col-xl-5 col-lg-4 layer3-cover txtcolor">
-                  <h3>පළමු පිටපත සදහා සහය : </h3>
-                 <div>fushenkao : <a href="https://github.com/fushenkao/Sinhala-Lyrics-Gen" target="_blank" rel="noreferrer">Sinhala-Lyrics-Gen</a>
-                  </div> 
-                  <div> minimaxir :<a href="https://github.com/minimaxir/textgenrnn" target="_blank" rel="noreferrer">textgenrnn</a> </div> 
-   {/*                <div>පසුතලය : කැටපත් පවුර, සීගිරිය (Sigiri Mirror Wall)</div> 
-                  <div><a href="http://thenationaltrust.lk/wp-content/uploads/2018/06/nds-nt-sigiriya.pdf" target="_blank" rel="noreferrer">thenationaltrust.lk</a> 
+                  <h3>පළමු වෙළුම සදහා සහය : </h3>
+                  <div>
+                    fushenkao :{" "}
+                    <a
+                      href="https://github.com/fushenkao/Sinhala-Lyrics-Gen"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Sinhala-Lyrics-Gen
+                    </a>
+                  </div>
+                  <div>
+                    {" "}
+                    minimaxir :
+                    <a
+                      href="https://github.com/minimaxir/textgenrnn"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      textgenrnn
+                    </a>{" "}
+                  </div>
+               {/*    <div>පසුතලය : කැටපත් පවුර, සීගිරිය (Sigiri Mirror Wall)</div>
+                  <div>
+                    <a
+                      href="http://thenationaltrust.lk/wp-content/uploads/2018/06/nds-nt-sigiriya.pdf"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      thenationaltrust.lk
+                    </a>
                   </div> */}
-                  <div>පසුතලය : බ්‍රාහ්මී නොවන සංකේත</div> 
-                  <div><a href="https://sanskaravinivida.wordpress.com/2020/06/03/%E0%B6%BD%E0%B6%9A%E0%B7%8A%E0%B6%AF%E0%B7%92%E0%B7%80-%E0%B6%BD%E0%B7%9A%E0%B6%9B%E0%B6%B1-%E0%B7%80%E0%B7%92%E0%B6%B4%E0%B7%8A%E0%B6%BD%E0%B7%80%E0%B6%BA/" target="_blank" rel="noreferrer">ලක්දිව ලේඛන විප්ලවය</a> 
-                  </div> 
+                   <div>පසුතලය : බ්‍රාහ්මී නොවන සංකේත (Pre-historic Non Brahmin's Symbols)</div>
                   <div>
-                  වෙනස්කම් වල ඉතිහාසය :</div> 
+                    <a
+                      href="https://sanskaravinivida.wordpress.com/2020/06/03/%E0%B6%BD%E0%B6%9A%E0%B7%8A%E0%B6%AF%E0%B7%92%E0%B7%80-%E0%B6%BD%E0%B7%9A%E0%B6%9B%E0%B6%B1-%E0%B7%80%E0%B7%92%E0%B6%B4%E0%B7%8A%E0%B6%BD%E0%B7%80%E0%B6%BA/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      ලක්දිව ලේඛන විප්ලවය,සංස්කාර විනිවිද
+                    </a>
+                  </div>
+                  <div>තාක්ෂණික වෙනස්කම් වල ඉතිහාසය :</div>
                   <div>
-                  <a href="https://sankalpayak.medium.com/%E0%B7%83%E0%B7%92%E0%B6%82%E0%B7%84%E0%B6%BD-%E0%B6%B4%E0%B6%AF-%E0%B6%9C%E0%B6%BD%E0%B6%B4%E0%B6%B8%E0%B7%94-change-log-528f41be0193" target="_blank" rel="noreferrer">Kanchana Sankalpa</a> 
+                  <a
+                      href="https://sankalpayak.medium.com/%E0%B7%83%E0%B7%92%E0%B6%82%E0%B7%84%E0%B6%BD-%E0%B6%B4%E0%B6%AF-%E0%B6%9C%E0%B6%BD%E0%B6%B4%E0%B6%B8%E0%B7%94-change-log-528f41be0193"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      සිංහල පද ගලපමු
+                    </a>
                   </div>
                 </div>
 
@@ -85,7 +139,10 @@ class textgenrnn extends Component {
                         onClick={this.submit}
                         type="submit"
                       >
-                        <span className="txtcolor">පද ගැළපීම </span>
+                        <span className="txtcolor">
+                          {isLoading && <Loader />}
+                          {!isLoading && <h2>පද ගැළපීම</h2>}
+                        </span>
                       </button>
                     </div>
                   </div>
