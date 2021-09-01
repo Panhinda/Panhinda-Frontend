@@ -67,22 +67,46 @@ class tpu extends Component {
             <div className="container">
               <div className="row">
                 <div className="col col-sm-12 main-head txtcolor">
-                  <h2>සිංහල පද ගලපමු-දෙවන පිටපත</h2>
+                  <h2>සිංහල පද ගලපමු-දෙවන වෙළුම</h2>
                 </div>
               </div>{" "}
               <div className="row row-details">
                 <div className="col-xl-5 col-lg-4 layer3-cover txtcolor">
-                  පළමු පිටපත සදහා සහය :
-                  <br /> fushenkao -
-                  https://github.com/fushenkao/Sinhala-Lyrics-Gen ,
-                  <br /> minimaxir - https://github.com/minimaxir/textgenrnn
-                  <br /> පසුතලය : කැටපත් පවුර, සීගිරිය (Sigiri Mirror Wall)
-                  <br />
-                  http://thenationaltrust.lk/wp-content/uploads/2018/06/nds-nt-sigiriya.pdf
-                  <br />
-                  වෙනස්කම් වල ඉතිහාසය :
-                  <br />
-                  https://ksankalpa.blogspot.com/2021/02/panhidalyrics-chages-log.html
+                <div>
+                සිංහල භාෂවේ ඇති කාව්‍යමය බව හැඟීම ප්‍රකාශනයේ හැකියාව පුළුල් කර ඇත. අසිමන්තිකව කාව්‍යමය භාෂාව රසවිඳීම සොයා දෙන්නට පන්හිඳ උත්සහ කරයි.
+                </div>
+                <div>
+                දෙවන පිටපතට සහය</div>
+                  <div>
+                  colab.research.google.com :{" "}
+                    <a
+                      href="https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/shakespeare_with_tpu_and_keras.ipynb"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Predict Shakespeare with Cloud TPUs and Keras
+                    </a>
+                  </div>
+                   <div>පසුතලය :  වෙස්සගිරිය සෙල්ලිපි (Wessagiri Manuscript)</div>
+                  <div>
+                    <a
+                      href="https://www.facebook.com/media/set/?set=a.454180464950026.1073741832.412244795810260&type=3"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      කටාරම
+                    </a>
+                  </div>
+                  <div>තාක්ෂණික වෙනස්කම් වල ඉතිහාසය :</div>
+                  <div>
+                  <a
+                      href="https://sankalpayak.medium.com/%E0%B7%83%E0%B7%92%E0%B6%82%E0%B7%84%E0%B6%BD-%E0%B6%B4%E0%B6%AF-%E0%B6%9C%E0%B6%BD%E0%B6%B4%E0%B6%B8%E0%B7%94-change-log-528f41be0193"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      සිංහල පද ගලපමු
+                    </a>
+                  </div>
                 </div>
 
                 <div className="col-xl-7 col-lg-8   second-side txtcolor">
