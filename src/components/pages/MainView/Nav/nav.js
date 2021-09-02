@@ -16,7 +16,7 @@ const Header = () => {
         expand="lg"
       >
         <Navbar.Brand href="#">
-          <h2>කැටපත් පවුර  </h2>
+          <h2> නොනිමි කැටපත් පවුර  </h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
