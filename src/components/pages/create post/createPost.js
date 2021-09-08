@@ -95,8 +95,7 @@ class createPost extends Component {
         console.log("selectedOption", selectedOption)
     }
     render() {
-
-        let feildVal = [... this.props.posts.postTypes, "none"]
+        let feildVal = [...this.props.posts.postTypes, "none"]
         let options = []
         options = this.props?.posts?.authorList.map(e => (e['name']))
 

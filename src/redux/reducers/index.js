@@ -78,13 +78,6 @@ const postReducer = (state = initialState, action) => {
                 createPostError: action.payload
 
             })
-        case "CREATE_POST_FAILED":
-            return Object.assign({}, state, {
-                isLoading: false,
-                hasError: true,
-                createPostError: action.payload
-
-            })
         case "FETCH_TYPE_LIST":
             return Object.assign({}, state, {
                 isLoading: true,

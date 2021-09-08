@@ -26,7 +26,7 @@ class textgenrnn extends Component {
     //process.env.ACTIVE_BACKEND_URL+
     axios
       .post(
-        process.env.REACT_APP_ACTIVE_BACKEND_URL + "/apitextgenrnnjson",
+        process.env.REACT_APP_ACTIVE_BACKEND_RNN_URL + "/apitextgenrnnjson",
         data,
         {
           headers: {

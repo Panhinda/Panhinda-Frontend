@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { composeWithDevTools } from "redux-devtools-extension";
+//import { composeWithDevTools } from "redux-devtools-extension";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Reducers from './redux/reducers/index';
+//import Reducers from './redux/reducers/index';
 import { Provider } from 'react-redux';
-import { applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
+//import { applyMiddleware, compose } from 'redux';
+//import thunk from 'redux-thunk';
 import { PersistGate } from 'redux-persist/integration/react';
 import createStore from './redux/store';
 
