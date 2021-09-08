@@ -38,7 +38,7 @@ class createPost extends Component {
             typeNone: false,
             hasNewAuthor: false,
             newAuthor: "",
-            author:""
+            author: ""
 
         }
         this.props.getAuthorList();
@@ -78,13 +78,13 @@ class createPost extends Component {
 
     }
     addNewAuthor = async (selectedOption, values) => {
-        console.log("values in AddNewAuthor", values)
+        //console.log("values in AddNewAuthor", values)
         if (selectedOption) {
             console.log("select option found", selectedOption)
             await this.setState({
                 newAuthor: selectedOption,
                 hasNewAuthor: true,
-                author:selectedOption,
+                author: selectedOption,
 
 
             })
@@ -199,7 +199,7 @@ class createPost extends Component {
 
                                             />
 
-                                          {/*   <input
+                                            {/*   <input
                                                 type="text"
                                                 name="author"
                                                 className="form-control"
