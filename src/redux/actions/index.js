@@ -7,9 +7,9 @@ export const fetchPosts =() =>{
     return((dispatch) =>{
 
         dispatch({type:"FETCH_POST_LIST"});
-        axios.get(`http://localhost:3000/getAllPosts`,{
+        axios.get(process.env.REACT_APP_ACTIVE_BACKEND_URL+`/getAllPosts`,{
             headers:{
-                'Access-Control-Allow-Origin': 'http://localhost:3000/',
+                'Access-Control-Allow-Origin': process.env.REACT_APP_ACTIVE_FRONTEND_URL,
                 'Content-Type': 'application/json'
             }
         }).then((res)=>{
@@ -30,9 +30,9 @@ export const fetchTypes =() =>{
     return((dispatch) =>{
 
         dispatch({type:"FETCH_TYPE_LIST"});
-        axios.get(`http://localhost:3000/getAllPostTypes`,{
+        axios.get(process.env.REACT_APP_ACTIVE_BACKEND_URL+`/getAllPostTypes`,{
             headers:{
-                'Access-Control-Allow-Origin': 'http://localhost:3000/',
+                'Access-Control-Allow-Origin': process.env.REACT_APP_ACTIVE_FRONTEND_URL,
                 'Content-Type': 'application/json'
             }
         }).then((res)=>{
@@ -53,9 +53,9 @@ export const getAuthorList =() =>{
     return((dispatch) =>{
 
         dispatch({type:"FETCH_AUTHOR_LIST"});
-        axios.get(`http://localhost:3000/allAuthors`,{
+        axios.get(process.env.REACT_APP_ACTIVE_BACKEND_URL+`/allAuthors`,{
             headers:{
-                'Access-Control-Allow-Origin': 'http://localhost:3000/',
+                'Access-Control-Allow-Origin': process.env.REACT_APP_ACTIVE_FRONTEND_URL,
                 'Content-Type': 'application/json'
             }
         }).then((res)=>{
@@ -76,9 +76,9 @@ export const selectedPost = (postId)=>{
     return((dispatch)=>{
 
         dispatch({type:"SELECTED_POST"})
-        axios.get(`http://localhost:3000/getPost/${postId}`,{
+        axios.get(process.env.REACT_APP_ACTIVE_BACKEND_URL+`/getPost/${postId}`,{
             headers:{
-                'Access-Control-Allow-Origin': 'http://localhost:3000/',
+                'Access-Control-Allow-Origin': process.env.REACT_APP_ACTIVE_FRONTEND_URL,
                 'Content-Type': 'application/json'
             }
         }).then(res=>{
@@ -99,9 +99,9 @@ export const predictionResultV2 = (text)=>{
     return((dispatch)=>{
 
         dispatch({type:"PREDICTION_RESULT_V2"})
-        axios.get(`http://localhost:3000/getPost/${text}`,{
+        axios.get(process.env.REACT_APP_ACTIVE_BACKEND_URL+`/getPost/${text}`,{
             headers:{
-                'Access-Control-Allow-Origin': 'http://localhost:3000/',
+                'Access-Control-Allow-Origin': process.env.REACT_APP_ACTIVE_FRONTEND_URL,
                 'Content-Type': 'application/json'
             }
         }).then(res=>{
@@ -121,9 +121,9 @@ export const newPost =(newpost) =>{
     return((dispatch) =>{
 
         dispatch({type:"CREATE_POST"});
-        axios.post(`http://localhost:3000/createPost`,newpost,{
+        axios.post(process.env.REACT_APP_ACTIVE_BACKEND_URL+`/createPost`,newpost,{
             headers:{
-                'Access-Control-Allow-Origin': 'http://localhost:3000/',
+                'Access-Control-Allow-Origin': process.env.REACT_APP_ACTIVE_FRONTEND_URL,
                 'Content-Type': 'application/json'
             }
         }).then((res)=>{
