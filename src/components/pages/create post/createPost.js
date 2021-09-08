@@ -5,7 +5,11 @@ import { Formik } from 'formik';
 import * as Yup from "yup";
 import { connect } from 'react-redux';
 import { newPost } from '../../../redux/actions';
+import { getAuthorList } from '../../../redux/actions';
 import { toast } from "react-toastify";
+
+import { Typeahead } from 'react-bootstrap-typeahead';
+import 'react-bootstrap-typeahead/css/Typeahead.css';
 
 
 
@@ -13,7 +17,7 @@ const validationSchema = Yup.object().shape({
 
     title: Yup.string().required(),
     postType: Yup.string().required(),
-    author: Yup.string().required(),
+    //author: Yup.string().required(),
     content: Yup.string().required()
 
 });
@@ -28,6 +32,22 @@ const initialValues = {
 
 class createPost extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            typeNone: false,
+            hasNewAuthor: false,
+            newAuthor: "",
+            author: ""
+
+        }
+        this.props.getAuthorList();
+    }
+
+    componentDidMount() {
+
+        this.props.getAuthorList();
+    }
 
     componentDidUpdate(prevProps) {
 
@@ -49,15 +69,41 @@ class createPost extends Component {
             user_id: "1",
             title: values.title,
             type: values.postType,
-            author: values.author,
+            author: this.state.author,
             content: values.content
         }
-        console.log("errors", errors)
+        console.log("on Save function -post", post)
         this.props.newPost(post)
 
 
     }
+    addNewAuthor = async (selectedOption, values) => {
+        //console.log("values in AddNewAuthor", values)
+        if (selectedOption) {
+            console.log("select option found", selectedOption)
+            await this.setState({
+                newAuthor: selectedOption,
+                hasNewAuthor: true,
+                author: selectedOption,
+
+
+            })
+
+
+        }
+
+        console.log("selectedOption", selectedOption)
+    }
     render() {
+
+        let feildVal = [... this.props.posts.postTypes, "none"]
+        let options = []
+        options = this.props?.posts?.authorList.map(e => (e['name']))
+
+        console.log("feildVal", feildVal)
+        console.log("authors", options)
+
+        console.log("post types in create", this.props.posts.postType)
         return (
             <div className="container">
 
@@ -82,8 +128,6 @@ class createPost extends Component {
                                                 type="text"
                                                 name="title"
                                                 className="form-control"
-                                                /* ref={input => this.title = input} */
-                                                /* onChange={handleChange} */
                                                 value={values.title}
                                                 onChange={handleChange}
                                                 placeholder="Title"
@@ -93,20 +137,69 @@ class createPost extends Component {
                                         <div className="form-group">
                                             <label>Type:</label>
 
-                                            <input
-                                                type="text"
-                                                name="postType"
-                                                className="form-control"
-                                                value={values.postType}
-                                                onChange={handleChange}
-                                                placeholder="Type"
-                                            />
+
+                                            <select
+                                                className="browser-default custom-select custom-select-lg mb-3"
+                                                onChange={(event) => {
+                                                    const { value } = event.currentTarget;
+                                                    setFieldValue(
+                                                        "postType", value,
+
+
+                                                    );
+                                                    if (value === "none") {
+                                                        this.setState({ typeNone: true })
+                                                    }
+                                                }}
+
+                                            >   {console.log("Access postTypes in map ", this.props.posts.postTypes)}
+
+                                                {
+
+                                                    feildVal.map((e, indx) => {
+
+                                                        console.log("inside map function", e)
+                                                        return (
+                                                            <option key={indx}>{e}</option>
+
+                                                        );
+
+
+                                                    })}
+
+
+                                            </select>
+                                            <div className={this.state.typeNone ? `d-block` : `d-none`}>
+                                                <p>Add New Type</p>
+                                                <input
+                                                    type="text"
+                                                    name="postType"
+                                                    className="form-control"
+                                                    value={values.postType}
+                                                    onChange={handleChange}
+                                                    placeholder="Type"
+                                                />
+                                                <button>Add New Type</button>
+                                            </div>
                                             <p className="text-danger">{errors.postType} </p>
                                         </div>
                                         <div className="form-group">
                                             <label>Author:</label>
+                                            {console.log("Values", values)}
 
-                                            <input
+                                            <Typeahead
+                                                id="basic-typeahead-single"
+                                                labelKey="name"
+
+                                                allowNew={true}
+
+                                                options={options}
+                                                placeholder="Choose an author..."
+                                                onChange={(e, values) => this.addNewAuthor(e, values)}
+
+                                            />
+
+                                            {/*   <input
                                                 type="text"
                                                 name="author"
                                                 className="form-control"
@@ -115,7 +208,7 @@ class createPost extends Component {
                                                 onChange={handleChange}
                                                 placeholder="Author"
                                             />
-                                            <p className="text-danger">{errors.author} </p>
+                                            <p className="text-danger">{errors.author} </p> */}
                                         </div>
 
 
@@ -185,4 +278,4 @@ const mapStateToProps = (state) => {
 
 }
 
-export default connect(mapStateToProps, { newPost })(createPost);
+export default connect(mapStateToProps, { newPost, getAuthorList })(createPost);

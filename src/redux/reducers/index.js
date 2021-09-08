@@ -6,7 +6,9 @@ const initialState = {
     isLoading: false,
     hasError: false,
     error: "",
-    createPostError:""
+    createPostError: "",
+    postTypes: [],
+    authorList: []
 
 };
 
@@ -19,11 +21,15 @@ const postReducer = (state = initialState, action) => {
                 hasError: false
             })
         case "FETCH_POSTS_SUCCESS":
-            return Object.assign({}, state, {
+            let data = action.payload
+            console.log("data", data.data.payload)
+            return ({
+                ...state,
                 isLoading: false,
                 hasError: false,
-                posts: action.payload
-            })
+                posts: [...data.data.payload]
+            }
+            )
         case "FETCH_POSTS_FAILED":
             return Object.assign({}, state, {
                 isLoading: false,
@@ -64,14 +70,71 @@ const postReducer = (state = initialState, action) => {
                 hasError: false,
                 selectedPost: action.payload
             })
-            //CREATE_POST_FAILED
-            case "CREATE_POST_FAILED":
-                return Object.assign({}, state, {
-                    isLoading: false,
-                    hasError: true,
-                    createPostError: action.payload
-    
-                })    
+        //CREATE_POST_FAILED
+        case "CREATE_POST_FAILED":
+            return Object.assign({}, state, {
+                isLoading: false,
+                hasError: true,
+                createPostError: action.payload
+
+            })
+        case "CREATE_POST_FAILED":
+            return Object.assign({}, state, {
+                isLoading: false,
+                hasError: true,
+                createPostError: action.payload
+
+            })
+        case "FETCH_TYPE_LIST":
+            return Object.assign({}, state, {
+                isLoading: true,
+                hasError: false,
+                // error:action.payload
+
+            })
+        case "FETCH_TYPES_SUCCESS":
+            console.log("Fetch type success", action.payload)
+            return Object.assign({}, state, {
+                isLoading: false,
+                postTypes: action.payload,
+                // error:action.payload
+
+            })
+        case "FETCH_TYPES_FAILED":
+            return Object.assign({}, state, {
+                isLoading: true,
+                hasError: false,
+                // error:action.payload
+
+            })
+        case "FETCH_AUTHOR_LIST":
+
+            return Object.assign({}, state, {
+                isLoading: true,
+                hasError: false,
+                // error:action.payload
+
+            })
+        case "FETCH_AUTHOR_LIST_SUCCESS":
+
+            return Object.assign({}, state, {
+                isLoading: false,
+                authorList: action.payload,
+                // error:action.payload
+
+            })
+        case "FETCH_AUTHOR_LIST_FAILED":
+
+            return Object.assign({}, state, {
+                isLoading: false,
+                hasError: true,
+                error: action.payload
+
+                // error:action.payload
+
+            })
+
+
 
 
 
