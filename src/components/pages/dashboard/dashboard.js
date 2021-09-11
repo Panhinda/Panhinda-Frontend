@@ -61,9 +61,14 @@ class dashboard extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.props.posts.isLoading ? (<div class="spinner-border text-info" role="status">
+                  
+                        {   console.log("this.props.posts",this.props.posts.posts)}
+                        {
+                        
+                        this.props.posts.isLoading ? (<div class="spinner-border text-info" role="status">
 
-                        </div>) : this.props.posts?.posts?.data?.payload.map(post => (
+                        </div>) : this.props.posts?.posts.map(post =>(
+                           
                             <tr>
 
                                 <td>{`${post.post_id}`}</td>
@@ -78,7 +83,7 @@ class dashboard extends Component {
 
 
 
-                        )} 
+                        )}
                     </tbody>
                 </table>
                 <button type="button" class="btn btn-primary">Primary</button>
