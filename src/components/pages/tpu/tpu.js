@@ -51,7 +51,7 @@ class tpu extends Component {
       })
       .catch((err) => {
         console.log(err);
-        toast("කරුණාකර නැවත උත්සහ කරන්න");
+        toast("කරුණාකර නැවත උත්සහ කරන්න.");
         this.setState({
           isLoading: false,
         });
