@@ -62,7 +62,10 @@ class dashboard extends Component {
                     </thead>
                     <tbody>
                   
-                        {   console.log("this.props.posts",this.props.posts.posts)}
+                        {   console.log("this.props.posts",this.props.posts.posts)} 
+                        {console.log("this.props.].isLoading",this.props.posts.isLoading)}
+                        
+                        
                         {
                         
                         this.props.posts.isLoading ? (<div class="spinner-border text-info" role="status">
@@ -86,7 +89,7 @@ class dashboard extends Component {
                         )}
                     </tbody>
                 </table>
-                <button type="button" class="btn btn-primary">Primary</button>
+                
             </div>
         );
     }
