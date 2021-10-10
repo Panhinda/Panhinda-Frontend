@@ -20,7 +20,7 @@ const postReducer = (state = initialState, action) => {
                 isLoading: true,
                 hasError: false
             })
-        case "FETCH_POSTS_SUCCESS":
+      /*   case "FETCH_POSTS_SUCCESS":
             let data = action.payload
             console.log("data", data.data.payload)
             return ({
@@ -29,6 +29,17 @@ const postReducer = (state = initialState, action) => {
                 hasError: false,
                 posts: [...data.data.payload]
             }
+            ) */
+
+        case "FETCH_POSTS_SUCCESS":
+            let data = action.payload
+            console.log("data", data.data.payload)
+            return Object.assign
+             ({}, state,{
+                isLoading: false,
+                hasError: false,
+                posts: [...data.data.payload]
+             }
             )
         case "FETCH_POSTS_FAILED":
             return Object.assign({}, state, {
@@ -66,7 +77,7 @@ const postReducer = (state = initialState, action) => {
 
         case "CREATE_POST_SUCCESS":
             return Object.assign({}, state, {
-                isLoading: false,
+                isLoading: 0,
                 hasError: false,
                 selectedPost: action.payload
             })
