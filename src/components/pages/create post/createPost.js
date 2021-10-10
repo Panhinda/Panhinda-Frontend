@@ -114,9 +114,6 @@ class createPost extends Component {
             customAttributes:[... state.customAttributes,{key:this.state.key,value:this.state.val}]
         
         }))
-
-      
-
     }
     render() {
         console.log("custom attribute []",this.state.customAttributes)
