@@ -15,12 +15,13 @@ class ViewPost extends Component {
       }
 
       componentDidMount(){
-       
+       console.log("COMPONENT DID MOUNT",this.props.match?.params.postID)
         this.props.selectedPost(this.props.match?.params.postID)
       }
     
     render() {
-        console.log("View post class", this.props.postSelected.selectedPost.data?.result[0]?.title)
+      console.log("TEST",this.props.match?.params.postID)
+        console.log("View post class", this.props.postSelected.selectedPost.data.data?.title)
         return (
             <div className="view-post-container">
                 <Header/>
@@ -41,12 +42,12 @@ class ViewPost extends Component {
                       </Media>
 
                     </div>
-                    <div className="col-8">
-                    <h1>{this.props.postSelected.selectedPost.data?.result[0]?.title}</h1>
-                    <h6>{`Type : ${this.props.postSelected.selectedPost.data?.result[0]?.type}`}</h6>
+                     <div className="col-8">
+                    <h1>{this.props.postSelected.selectedPost.data?.data?.title}</h1>
+                    <h6>{`Type : ${this.props.postSelected.selectedPost.data?.data?.type}`}</h6>
                     <h6>Author:</h6>
 
-                    </div>
+                    </div> 
                     
                     </div>
 
@@ -58,7 +59,7 @@ class ViewPost extends Component {
                 <div className="row d-flex">
                     <div className="content-container">
                     <h4>Content:</h4>
-                    <p>{this.props.postSelected.selectedPost.data?.result[0]?.content}</p>
+                    <p>{this.props.postSelected.selectedPost.data?.data?.content}</p> 
                     </div>
                 </div>
                 <div className="row">

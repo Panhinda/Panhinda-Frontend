@@ -1,4 +1,4 @@
- import React, { Component } from 'react';
+import React, { Component } from 'react';
 import './createPost.scss'
 import axios from 'axios';
 import { Formik } from 'formik';
@@ -39,11 +39,11 @@ class createPost extends Component {
             hasNewAuthor: false,
             newAuthor: "",
             author: "",
-            noCustomAttr:0,
-            newCustomAttribute:false,
-            customAttributes:[],
-            key:"",
-            val:""
+            noCustomAttr: 0,
+            newCustomAttribute: false,
+            customAttributes: [],
+            key: "",
+            val: ""
 
         }
         this.props.getAuthorList();
@@ -83,11 +83,11 @@ class createPost extends Component {
 
     }
 
-    addNewAuthor =  (selectedOption, values) => {
+    addNewAuthor = (selectedOption, values) => {
         //console.log("values in AddNewAuthor", values)
         if (selectedOption) {
             console.log("select option found", selectedOption)
-             this.setState({
+            this.setState({
                 newAuthor: selectedOption,
                 hasNewAuthor: true,
                 author: selectedOption,
@@ -101,25 +101,26 @@ class createPost extends Component {
         console.log("selectedOption", selectedOption)
     }
 
-    addCustomAttribute = ()=>{
-        this.setState((state)=>({noCustomAttr:state.noCustomAttr+1,
-            newCustomAttribute:true
-        
+    addCustomAttribute = () => {
+        this.setState((state) => ({
+            noCustomAttr: state.noCustomAttr + 1,
+            newCustomAttribute: true
+
         }))
     }
-    saveCustomAttribute = () =>{
+    saveCustomAttribute = () => {
 
-        this.setState((state)=>({
-            newCustomAttribute:false,
-            customAttributes:[... state.customAttributes,{key:this.state.key,value:this.state.val}]
-        
+        this.setState((state) => ({
+            newCustomAttribute: false,
+            customAttributes: [...state.customAttributes, { key: this.state.key, value: this.state.val }]
+
         }))
 
-      
+
 
     }
     render() {
-        console.log("custom attribute []",this.state.customAttributes)
+        console.log("custom attribute []", this.state.customAttributes)
         let feildVal = [... this.props.posts.postTypes, "none"]
         let options = []
         options = this.props.posts.authorList.map(e => (e['name']))
@@ -255,76 +256,78 @@ class createPost extends Component {
 
                                         <div className="col-12">
                                             <div className="row">
-                                                
-                                                 <h5>custom attributes</h5>  
-                                                <hr/>
-                                           
-                                                {this.state.customAttributes?this.state.customAttributes.map(e=>(<div className="row"><div className="col-4"><h6>Key:</h6> <p>{e.key}</p></div> <div className="col-4"><h6>Value:</h6> <p>{e.value}</p></div></div>)
 
-                                                  
-                                                ):""}
-                                                
-                                                </div>
-                                                
-                                                
-                                                <div className=" col-8">
-                                                    <div className="row">
-                                                   <div className="col-6">
-                                                       
-                                                   Add custom attributes :
-                                                       </div>  
-                                                       
-                                                       <div className="col-6">
-                                                       <button onClick={this.addCustomAttribute}>+</button> 
-                                                       </div>
+                                                <h5>custom attributes</h5>
+                                                <hr />
 
-                                                       {this.state.newCustomAttribute?<div className="col-12"><div className="row">
-                                                       <div className="col-4">
-                                            <label>Key:</label>
-                                            
-                                            <input
-                                                    type="Key"
-                                                    name="key"
-                                                    className="col-4"
-                                                    //value={this.state.key}
-                                                    onChange={(e)=>{
-                                                        e.preventDefault()
-                                                        this.setState({key:e.target.value})}}
-                                                    placeholder="Type"
-                                                />
-                                            
+                                                {this.state.customAttributes ? this.state.customAttributes.map(e => (<div className="row"><div className="col-4"><h6>Key:</h6> <p>{e.key}</p></div> <div className="col-4"><h6>Value:</h6> <p>{e.value}</p></div></div>)
+
+
+                                                ) : ""}
+
                                             </div>
-                                            <div className="col-4">
-                                            <label>Value:</label>
-                                            
-                                            <input
-                                                    type="value"
-                                                    name="key"
-                                                    className="col-4"
-                                                    //value={this.state.val}
-                                                    onChange={(e)=>{
-                                                        e.preventDefault() 
-                                                        this.setState({val:e.target.value})}}
-                                                    placeholder="Type"
-                                                />
-                                            
-                                            </div>  
-                                            <div className="col-4">
-                                          
-                                            <button onClick={this.saveCustomAttribute}>Save</button>
-                                            
-                                            </div>      
-                                                           </div></div>:
-                                                       <div></div>
-                                                    }
-                                                     
 
 
+                                            <div className=" col-8">
+                                                <div className="row">
+                                                    <div className="col-6">
+
+                                                        Add custom attributes :
                                                     </div>
-                                                   
+
+                                                    <div className="col-6">
+                                                        <button onClick={this.addCustomAttribute}>+</button>
+                                                    </div>
+
+                                                    {this.state.newCustomAttribute ? <div className="col-12"><div className="row">
+                                                        <div className="col-4">
+                                                            <label>Key:</label>
+
+                                                            <input
+                                                                type="Key"
+                                                                name="key"
+                                                                className="col-4"
+                                                                //value={this.state.key}
+                                                                onChange={(e) => {
+                                                                    e.preventDefault()
+                                                                    this.setState({ key: e.target.value })
+                                                                }}
+                                                                placeholder="Type"
+                                                            />
+
+                                                        </div>
+                                                        <div className="col-4">
+                                                            <label>Value:</label>
+
+                                                            <input
+                                                                type="value"
+                                                                name="key"
+                                                                className="col-4"
+                                                                //value={this.state.val}
+                                                                onChange={(e) => {
+                                                                    e.preventDefault()
+                                                                    this.setState({ val: e.target.value })
+                                                                }}
+                                                                placeholder="Type"
+                                                            />
+
+                                                        </div>
+                                                        <div className="col-4">
+
+                                                            <button onClick={this.saveCustomAttribute}>Save</button>
+
+                                                        </div>
+                                                    </div></div> :
+                                                        <div></div>
+                                                    }
+
+
+
                                                 </div>
-                                                
-                                                </div>
+
+                                            </div>
+
+                                        </div>
                                         <div className="col-1">
                                             <div className="row">
                                                 <div className="col-6">

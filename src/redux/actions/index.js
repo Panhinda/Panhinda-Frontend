@@ -85,6 +85,7 @@ export const selectedPost = (postId)=>{
             console.log("selected post fetched",res)
             dispatch({type:'SELECTED_POST_SUCCESS',payload: res})
         }).catch((err)=>{
+            console.log(err)
             dispatch({type:'SELECTED_POST_FAILED',payload:err})
 
         })
