@@ -131,8 +131,12 @@ class createPost extends Component {
         console.log("post types in create", this.props.posts.postType)
         return (
             <div className="container">
+                <div className="row">
+                    <div className="col-4"><button onClick={()=>{this.props.history.goBack()}}>Back</button></div>
+                </div>
 
                 <div className="card-header"><h1>Create Posts</h1></div>
+
 
                 <div className="card card-statistics custom-card-bottom">
 
