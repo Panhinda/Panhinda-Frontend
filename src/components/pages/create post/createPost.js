@@ -121,7 +121,7 @@ class createPost extends Component {
     }
     render() {
         console.log("custom attribute []", this.state.customAttributes)
-        let feildVal = [... this.props.posts.postTypes, "none"]
+        let feildVal = [...this.props.posts.postTypes, "none"]
         let options = []
         options = this.props.posts.authorList.map(e => (e['name']))
 
