@@ -24,6 +24,9 @@ class ViewPost extends Component {
         console.log("View post class", this.props.postSelected.selectedPost.data.data?.title)
         return (
             <div className="view-post-container">
+              <div className="row">
+                    <div className="col-4"><button onClick={()=>{this.props.history.goBack()}}>Back</button></div>
+                </div>
                 <Header/>
                 <div className="card-container">
               <div className="card card-statistics custom-card-bottom grid-margin">
