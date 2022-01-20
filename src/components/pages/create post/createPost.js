@@ -71,11 +71,12 @@ class createPost extends Component {
     onSave = (values, errors) => {
 
         const post = {
-            user_id: "1",
+            user_id: "1",//later have to update with the logged in users name
             title: values.title,
             type: values.postType,
             author: this.state.author,
-            content: values.content
+            content: values.content,
+            customAttributes:this.state.customAttributes
         }
         console.log("on Save function -post", post)
         this.props.newPost(post)
@@ -146,9 +147,11 @@ class createPost extends Component {
 
                             initialValues={initialValues}
                             validationSchema={validationSchema}
-                            onSubmit={(values, errors) => { this.onSave(values, errors) }}
+                            onSubmit={(values, errors) => {
+                                console.log("Formik onsubmit")
+                                this.onSave(values, errors) }}
                         >
-                            {({ values, errors, handleChange, handleSubmit, setFieldValue, resetForm }) => {
+                            {({ values, errors, handleChange, handleSubmit, setFieldValue, resetForm,onSubmit }) => {
                                 return (
                                     <>
                                         <div className="form-group">
