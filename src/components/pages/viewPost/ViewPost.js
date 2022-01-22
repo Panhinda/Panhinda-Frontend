@@ -59,7 +59,7 @@ class ViewPost extends Component {
                 
               </div>
               <div className="card-body"></div>
-                <div className="row d-flex">
+                <div className="row d-flex">  
                     <div className="content-container">
                     <h4>Content:</h4>
                     <p>{this.props.postSelected.selectedPost.data?.data?.content}</p> 
@@ -67,10 +67,18 @@ class ViewPost extends Component {
                 </div>
                 <div className="row">
                 <div className="content-container">  
-                <h4>Custom Attributes:</h4>
-                </div>
-                </div>
+                <h4>Custom Attributes:</h4>  
 
+                {console.log("BLA BLA BLA",this.props.postSelected.selectedPost.data?.data?.customAttributes)}
+                
+                {this.props.postSelected.selectedPost.data?.data?.customAttributes.map(elem=>{return(
+                  <div className='col-12'>  
+                   <div className='row'>  
+            <div className='col-4' ><h6 className='font-weight-bold'> {elem.key_value}:</h6></div> <div className='col-5'><p>{elem.value}</p> </div> </div></div>  )})}
+            
+                </div>
+                </div>
+ 
               </div>
               
               </div>

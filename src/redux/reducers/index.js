@@ -8,9 +8,21 @@ const initialState = {
     error: "",
     createPostError: "",
     postTypes: [],
-    authorList: []
+    authorList: [],
+   
 
 };
+
+
+const initialUserState = {
+    loggedUser: {
+        isLoading: false,
+        hasError: false,
+        error: {},
+        user: {}
+
+    }
+}
 
 const postReducer = (state = initialState, action) => {
     console.log("Action in reducer", action.payload)
@@ -20,27 +32,27 @@ const postReducer = (state = initialState, action) => {
                 isLoading: true,
                 hasError: false
             })
-      /*   case "FETCH_POSTS_SUCCESS":
-            let data = action.payload
-            console.log("data", data.data.payload)
-            return ({
-                ...state,
-                isLoading: false,
-                hasError: false,
-                posts: [...data.data.payload]
-            }
-            ) */
+        /*   case "FETCH_POSTS_SUCCESS":
+              let data = action.payload
+              console.log("data", data.data.payload)
+              return ({
+                  ...state,
+                  isLoading: false,
+                  hasError: false,
+                  posts: [...data.data.payload]
+              }
+              ) */
 
         case "FETCH_POSTS_SUCCESS":
             let data = action.payload
             console.log("data", data.data.payload)
             return Object.assign
-             ({}, state,{
-                isLoading: false,
-                hasError: false,
-                posts: [...data.data.payload]
-             }
-            )
+                ({}, state, {
+                    isLoading: false,
+                    hasError: false,
+                    posts: [...data.data.payload]
+                }
+                )
         case "FETCH_POSTS_FAILED":
             return Object.assign({}, state, {
                 isLoading: false,
@@ -147,19 +159,60 @@ const postReducer = (state = initialState, action) => {
 
     }
 
-/*
-    return [{title:"Hp1", id :1, author:{}, content:"post contenybuuwbwud"},
-    {title:"Hp2", id :2, author:{}, content:"post contenybuuwbwud"},
-    {title:"Hp3", id :3, author:{}, content:"post contenybuuwbwud"},
-    {title:"Hp4", id :4, author:{}, content:"post contenybuuwbwud"},
 
 
-]*/
+
+
+
+
+    return [{ title: "Hp1", id: 1, author: {}, content: "post contenybuuwbwud" },
+    { title: "Hp2", id: 2, author: {}, content: "post contenybuuwbwud" },
+    { title: "Hp3", id: 3, author: {}, content: "post contenybuuwbwud" },
+    { title: "Hp4", id: 4, author: {}, content: "post contenybuuwbwud" },
+
+]
 
 }
 
+const userReducer = (state = initialUserState, action) => {
+
+    switch (action.type) {
+        case "USER_LOGIN":
+            return Object.assign({}, state, {
+                loggedUser: {
+                    isLoading: true,
+                    hasError: false
+                }
+            })
+        case "USER_LOGIN_SUCCESS":
+            return Object.assign({}, state, {
+                loggedUser: {
+                    isLoading: false,
+                    user: {...action.payload.data.result}
+                }
+
+
+            })
+        case "USER_LOGIN_FAILED":
+            return Object.assign({}, state, {
+
+                loggedUser: {
+                    isLoading: false,
+                    hasError:true,
+                    error: action.payload.data
+                }
+
+            })
+            default:
+                return state
+
+
+    }
+
+}
 
 export default combineReducers({
     posts: postReducer,
+    user: userReducer
     //selectedPost:selectedPostReducer
 })
