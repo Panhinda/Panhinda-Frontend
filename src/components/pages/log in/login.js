@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './login.css';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import { toast } from "react-toastify";
 
 import { connect } from 'react-redux';
@@ -91,7 +91,7 @@ export default connect(mapStateToProps,{loginAction})(Login);
 
 
 
-{/* const mapStateToProps = (state) => {
+/* const mapStateToProps = (state) => {
 
     
 
@@ -107,4 +107,4 @@ return {
 
 }
 
-export default connect(mapStateToProps, {loginAction})(Login); */}
+export default connect(mapStateToProps, {loginAction})(Login); */

@@ -163,14 +163,14 @@ const postReducer = (state = initialState, action) => {
 
 
 
-
+/* 
 
     return [{ title: "Hp1", id: 1, author: {}, content: "post contenybuuwbwud" },
     { title: "Hp2", id: 2, author: {}, content: "post contenybuuwbwud" },
     { title: "Hp3", id: 3, author: {}, content: "post contenybuuwbwud" },
     { title: "Hp4", id: 4, author: {}, content: "post contenybuuwbwud" },
 
-]
+] */
 
 }
 

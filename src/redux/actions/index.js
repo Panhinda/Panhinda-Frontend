@@ -9,7 +9,7 @@ export const fetchPosts = () => {
         dispatch({ type: "FETCH_POST_LIST" });
         axios.get(process.env.REACT_APP_ACTIVE_BACKEND_URL+`/getAllPosts`, {
             headers: {
-                'Access-Control-Allow-Origin': process.env.REACT_APP_ACTIVE_BACKEND_URL+,
+                'Access-Control-Allow-Origin': process.env.REACT_APP_ACTIVE_BACKEND_URL,
                 'Content-Type': 'application/json'
             }
         }).then((res) => {
