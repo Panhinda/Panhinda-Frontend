@@ -128,9 +128,9 @@ export const loginAction = (loginUser) => {
     return ((dispatch) => {
 
         dispatch({ type: "USER_LOGIN" });
-        axios.post(`http://localhost:3000/login`, loginUser, {
+        axios.post(process.env.REACT_APP_ACTIVE_BACKEND_URL+`/login`, loginUser, {
             headers: {
-                'Access-Control-Allow-Origin': 'http://localhost:3000/',
+                'Access-Control-Allow-Origin': process.env.REACT_APP_ACTIVE_BACKEND_URL,
                 'Content-Type': 'application/json'
             }
         }).then((res) => {
