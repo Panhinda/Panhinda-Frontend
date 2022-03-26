@@ -130,7 +130,7 @@ export const loginAction = (loginUser) => {
         dispatch({ type: "USER_LOGIN" });
         axios.post(process.env.REACT_APP_ACTIVE_BACKEND_URL+`/login`, loginUser, {
             headers: {
-                'Access-Control-Allow-Origin': process.env.REACT_APP_ACTIVE_BACKEND_URL,
+                'Access-Control-Allow-Origin': process.env.REACT_APP_ACTIVE_FRONTEND_URL,
                 'Content-Type': 'application/json'
             }
         }).then((res) => {
